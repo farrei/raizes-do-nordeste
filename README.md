@@ -2,7 +2,7 @@
 
 **Sabor que tem história.**
 
-Projeto acadêmico desenvolvido por **Rafael Ferreira Verissimo — RU 5000980**.
+Projeto acadêmico desenvolvido por **EM TESTE**.
 
 ## Objetivo
 
@@ -47,5 +47,3 @@ Protótipo web responsivo para uma experiência digital de restaurante, contempl
 ## Observações
 
 O pagamento é apenas uma simulação acadêmica e não processa dados financeiros reais.
-
-A entrega contém declaração explícita de uso de IA no documento acadêmico. O uso foi registrado de forma transparente, conforme a exigência do roteiro fornecido para a atividade.
