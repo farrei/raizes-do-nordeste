@@ -1,23 +1,34 @@
 # LGPD e privacidade
 
-O protótipo considera a privacidade como parte da jornada do pedido.
+A privacidade faz parte da jornada do usuário neste protótipo.
 
-## Dados
+## O que aparece na interface
 
-O fluxo demonstra apenas dados necessários para a experiência acadêmica, como e-mail no formulário de acesso e consentimento relacionado ao pedido.
+- **Banner de consentimento** na primeira visita (Aceitar / Recusar).
+- **Checkbox obrigatório** no login e no cadastro.
+- **Checkbox obrigatório** antes de enviar o pedido para o pagamento externo.
+- Link para a **Política de Privacidade** no banner, no rodapé e nos formulários.
+
+## Dados tratados (demonstração)
+
+- Nome e e-mail (formulário de cadastro/login).
+- Itens do pedido e unidade selecionada.
+
+Não são solicitados dados bancários. O pagamento é apenas simulado.
+
+## Minimização e transparência
+
+O protótipo pede só o necessário para a experiência acadêmica.
+A interface deixa claro que o pagamento ocorre em serviço externo e que não há coleta real de dados financeiros.
 
 ## Consentimento
 
-Antes do encaminhamento ao pagamento externo simulado, o usuário precisa marcar explicitamente que aceita o tratamento dos dados necessários ao pedido.
+Sem marcar o aceite, o usuário não consegue:
+- concluir o login/cadastro;
+- seguir para o pagamento.
 
-## Minimização
-
-Não são solicitados dados bancários reais no protótipo.
-
-## Transparência
-
-A interface informa que o pagamento ocorre em serviço externo e que a demonstração não coleta dados financeiros reais.
+A preferência do banner é guardada em `localStorage` (chave `rn_lgpd`) só para não reaparecer a cada reload — é um recurso de demonstração, não um armazenamento real de dados sensíveis.
 
 ## Segurança
 
-A aplicação é uma demonstração front-end. Não deve ser utilizada para processamento real de pagamentos ou armazenamento de informações sensíveis.
+Aplicação front-end de estudo. Não deve ser usada para processar pagamentos ou guardar informações sensíveis de verdade.
