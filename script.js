@@ -16,7 +16,6 @@ let points = 620;
 const $ = (s) => document.querySelector(s);
 const money = (n) => n.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
-// ---------- cardápio ----------
 function renderMenu() {
   const grid = $("#menuGrid");
   const list = currentCategory === "Todos" ? menu : menu.filter((x) => x.category === currentCategory);
@@ -30,7 +29,7 @@ function renderMenu() {
         <p>${x.desc}</p>
         <div class="food-meta">
           <span class="price">${money(x.price)}</span>
-          <button class="add" data-add="${x.id}">Adicionar</button>
+          <button class="add" data-add="${x.id}" type="button">Adicionar</button>
         </div>
       </div>
     </article>
@@ -44,14 +43,9 @@ function renderMenu() {
 function add(id) {
   const item = menu.find((x) => x.id === id);
   if (!item) return;
-
   const found = cart.find((x) => x.id === id);
-  if (found) {
-    found.qty++;
-  } else {
-    cart.push({ ...item, qty: 1 });
-  }
-
+  if (found) found.qty++;
+  else cart.push({ ...item, qty: 1 });
   renderCart();
   toast("Item adicionado à sacola.");
 }
@@ -59,12 +53,8 @@ function add(id) {
 function remove(id) {
   const i = cart.findIndex((x) => x.id === id);
   if (i < 0) return;
-
-  if (cart[i].qty > 1) {
-    cart[i].qty--;
-  } else {
-    cart.splice(i, 1);
-  }
+  if (cart[i].qty > 1) cart[i].qty--;
+  else cart.splice(i, 1);
   renderCart();
 }
 
@@ -82,7 +72,7 @@ function renderCart() {
           <strong>${x.name}</strong>
           <small>${x.qty} × ${money(x.price)}</small>
         </div>
-        <button data-remove="${x.id}">Remover</button>
+        <button data-remove="${x.id}" type="button">Remover</button>
       </div>
     `).join("");
   }
@@ -92,7 +82,6 @@ function renderCart() {
   });
 }
 
-// ---------- sacola ----------
 function openCart() {
   $("#cartDrawer").classList.add("open");
   $("#cartDrawer").setAttribute("aria-hidden", "false");
@@ -105,7 +94,6 @@ function closeCart() {
   $("#overlay").classList.remove("show");
 }
 
-// ---------- modal genérico ----------
 function showModal(html) {
   $("#modalContent").innerHTML = html;
   $("#modal").classList.add("show");
@@ -124,9 +112,7 @@ function toast(msg) {
   setTimeout(() => t.classList.remove("show"), 2500);
 }
 
-// ---------- LGPD ----------
 function checkLgpdBanner() {
-  // se já aceitou antes, some com o banner
   if (localStorage.getItem("rn_lgpd") === "ok") {
     $("#lgpdBanner").style.display = "none";
   }
@@ -135,62 +121,70 @@ function checkLgpdBanner() {
 function acceptLgpd() {
   localStorage.setItem("rn_lgpd", "ok");
   $("#lgpdBanner").style.display = "none";
-  toast("Preferências de privacidade salvas.");
+  toast("Consentimento registrado (LGPD)." );
 }
 
 function refuseLgpd() {
-  // recusar não impede de usar o site, só limita fidelidade no futuro
   $("#lgpdBanner").style.display = "none";
-  toast("Algumas funções de fidelidade podem ficar limitadas.");
+  toast("Sem consentimento, fidelidade e conta ficam limitados.");
 }
 
+// texto da política — Lei 13.709/2018 explícita
 function showPrivacy() {
   showModal(`
     <h2>Política de Privacidade</h2>
-    <p style="font-size:14px;line-height:1.6">
-      Coletamos apenas o necessário para processar o pedido (nome, e-mail e itens do carrinho).
-      Não pedimos dados bancários nesta demonstração — o pagamento é simulado em um serviço externo.
-      Você pode solicitar a exclusão dos seus dados a qualquer momento.
-      Este protótipo é acadêmico e não armazena informações sensíveis de verdade.
+    <p style="font-size:13px;line-height:1.65;max-height:50vh;overflow:auto">
+      Este protótipo observa a <strong>Lei Geral de Proteção de Dados Pessoais
+      (LGPD) — Lei nº 13.709, de 14 de agosto de 2018</strong>.
+      <br><br>
+      <strong>Controlador (demonstração acadêmica):</strong> projeto Raízes do Nordeste.<br>
+      <strong>Dados tratados:</strong> nome, e-mail e dados do pedido (itens e unidade).<br>
+      <strong>Finalidade:</strong> autenticação simulada, montagem do pedido e programa de fidelidade.<br>
+      <strong>Base legal:</strong> consentimento do titular (art. 7º, inciso I, da LGPD).<br>
+      <strong>Compartilhamento:</strong> o pagamento é apenas simulado; não enviamos dados bancários a terceiros neste protótipo.<br>
+      <strong>Seus direitos (art. 18):</strong> confirmação de tratamento, acesso, correção, anonimização, eliminação e revogação do consentimento.
+      <br><br>
+      Não solicitamos dados financeiros reais. Ao marcar os campos de aceite no site, você registra o consentimento livre e informado exigido pela LGPD.
     </p>
-    <button class="btn primary full" id="closePrivacyBtn">Entendi</button>
+    <button class="btn primary full" id="closePrivacyBtn" type="button">Entendi</button>
   `);
 }
 
-// ---------- login / cadastro ----------
 function openAuth(mode) {
-  // mode = "login" ou "cadastro"
   if (mode === "cadastro") {
     showModal(`
       <h2>Criar conta</h2>
-      <p>Cadastre-se para acompanhar pedidos e acumular pontos.</p>
+      <p>Cadastre-se para pedidos e pontos.</p>
       <input class="field" type="text" id="regName" placeholder="Seu nome" aria-label="Nome">
       <input class="field" type="email" id="regEmail" placeholder="E-mail" aria-label="E-mail">
       <input class="field" type="password" id="regPass" placeholder="Senha" aria-label="Senha">
       <label class="check-label">
         <input type="checkbox" id="regConsent">
-        Autorizo o uso dos meus dados conforme a <a href="#" id="linkPrivReg">Política de Privacidade</a>.
+        Autorizo o tratamento dos meus dados pessoais nos termos da
+        <strong>LGPD (Lei nº 13.709/2018)</strong> e da
+        <a href="#" id="linkPrivReg">Política de Privacidade</a>.
       </label>
-      <button class="btn primary full" id="doRegister" style="margin-top:14px">Cadastrar</button>
+      <button class="btn primary full" id="doRegister" type="button" style="margin-top:14px">Cadastrar</button>
       <p style="font-size:13px;margin-top:12px">Já tem conta? <a href="#" id="goLogin">Entrar</a></p>
     `);
   } else {
     showModal(`
       <h2>Entrar na conta</h2>
-      <p>Acesse seus pedidos, pontos e benefícios.</p>
+      <p>Pedidos, pontos e benefícios.</p>
       <input class="field" type="email" id="loginEmail" placeholder="Seu e-mail" aria-label="E-mail">
       <input class="field" type="password" id="loginPass" placeholder="Senha" aria-label="Senha">
       <label class="check-label">
         <input type="checkbox" id="loginConsent">
-        Concordo com a <a href="#" id="linkPrivLogin">Política de Privacidade</a>.
+        Concordo com o tratamento de dados conforme a
+        <strong>LGPD (Lei nº 13.709/2018)</strong> e a
+        <a href="#" id="linkPrivLogin">Política de Privacidade</a>.
       </label>
-      <button class="btn primary full" id="doLogin" style="margin-top:14px">Entrar</button>
+      <button class="btn primary full" id="doLogin" type="button" style="margin-top:14px">Entrar</button>
       <p style="font-size:13px;margin-top:12px">Ainda não tem conta? <a href="#" id="goRegister">Cadastre-se</a></p>
     `);
   }
 }
 
-// ---------- status do pedido ----------
 function updateTracker() {
   const steps = document.querySelectorAll("#orderTracker .step");
   steps.forEach((s) => {
@@ -205,7 +199,6 @@ function startOrderTracking(orderId) {
   updateTracker();
   $("#orderStatus").textContent = `Pedido #${orderId} confirmado. Status: Recebido.`;
 
-  // simula avanço automático (só pra demonstração)
   setTimeout(() => {
     if (orderStep < 0) return;
     orderStep = 1;
@@ -228,7 +221,6 @@ function startOrderTracking(orderId) {
   }, 12000);
 }
 
-// ---------- eventos ----------
 document.querySelectorAll(".filter").forEach((b) => {
   b.onclick = () => {
     document.querySelectorAll(".filter").forEach((x) => x.classList.remove("active"));
@@ -263,22 +255,23 @@ $("#checkoutButton").onclick = () => {
 
   showModal(`
     <h2>Pagamento externo</h2>
-    <p>Você será direcionado a um provedor externo para concluir o pagamento. Este protótipo <strong>não coleta dados bancários reais</strong>.</p>
+    <p>Você será direcionado a um provedor externo. Este protótipo
+    <strong>não coleta dados bancários reais</strong>.</p>
     <label class="check-label">
       <input type="checkbox" id="consent">
-      Aceito o tratamento dos dados necessários ao pedido (LGPD).
+      Consinto o tratamento dos dados do pedido nos termos da
+      <strong>LGPD (Lei nº 13.709/2018)</strong>, art. 7º, I.
     </label>
-    <button class="btn primary full" style="margin-top:18px" id="pay">Ir para pagamento</button>
+    <button class="btn primary full" style="margin-top:18px" id="pay" type="button">Ir para pagamento</button>
   `);
 };
 
-// clique geral no modal (login, cadastro, pagamento, privacidade)
 document.addEventListener("click", (e) => {
   const id = e.target.id;
 
   if (id === "doLogin") {
     if (!$("#loginConsent") || !$("#loginConsent").checked) {
-      toast("Marque o consentimento de privacidade para continuar.");
+      toast("É preciso aceitar a LGPD (Lei 13.709/2018) para entrar.");
       return;
     }
     closeModal();
@@ -292,7 +285,7 @@ document.addEventListener("click", (e) => {
       return;
     }
     if (!$("#regConsent") || !$("#regConsent").checked) {
-      toast("É necessário autorizar o uso dos dados (LGPD).");
+      toast("Autorize o tratamento de dados (LGPD) para cadastrar.");
       return;
     }
     closeModal();
@@ -314,13 +307,11 @@ document.addEventListener("click", (e) => {
     showPrivacy();
   }
 
-  if (id === "closePrivacyBtn") {
-    closeModal();
-  }
+  if (id === "closePrivacyBtn") closeModal();
 
   if (id === "pay") {
     if (!$("#consent") || !$("#consent").checked) {
-      toast("Confirme o consentimento LGPD para continuar.");
+      toast("Confirme o consentimento LGPD (Lei 13.709/2018).");
       return;
     }
 
@@ -330,16 +321,13 @@ document.addEventListener("click", (e) => {
     const orderId = "RN-" + Math.floor(1000 + Math.random() * 9000);
     const total = cart.reduce((s, x) => s + x.price * x.qty, 0);
 
-    // limpa a sacola
     cart = [];
     renderCart();
 
-    // pontinhos de fidelidade (1 ponto por real)
     points += Math.floor(total);
     $("#pointsValue").textContent = points;
     $("#pointsLabel").textContent = points + " pontos";
-    const pct = Math.min(100, (points / 1000) * 100);
-    $("#progressBar").style.width = pct + "%";
+    $("#progressBar").style.width = Math.min(100, (points / 1000) * 100) + "%";
 
     startOrderTracking(orderId);
     toast("Pagamento externo simulado com sucesso.");
@@ -349,7 +337,6 @@ document.addEventListener("click", (e) => {
 $("#lgpdAccept").onclick = acceptLgpd;
 $("#lgpdRefuse").onclick = refuseLgpd;
 
-// start
 checkLgpdBanner();
 renderMenu();
 renderCart();
