@@ -11,17 +11,21 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- efeito de fumaça sutil no fundo -->
   <div class="smoke smoke-a" aria-hidden="true"></div>
   <div class="smoke smoke-b" aria-hidden="true"></div>
 
-  <!-- banner de privacidade / LGPD -->
-  <div class="lgpd-banner" id="lgpdBanner">
+  <!-- Banner LGPD — Lei 13.709/2018 -->
+  <div class="lgpd-banner" id="lgpdBanner" role="dialog" aria-label="Aviso de privacidade LGPD">
     <div class="lgpd-inner">
-      <p>Usamos dados apenas para processar seu pedido e o programa de fidelidade. Ao continuar, você concorda com nossa <a href="#" id="openPrivacy">Política de Privacidade</a>.</p>
+      <p>
+        <strong>Privacidade (LGPD — Lei nº 13.709/2018):</strong>
+        tratamos dados pessoais somente com a sua autorização, para pedido e fidelidade.
+        Base legal: consentimento (art. 7º, I). Saiba mais na
+        <a href="#" id="openPrivacy">Política de Privacidade</a>.
+      </p>
       <div class="lgpd-actions">
-        <button class="btn ghost" id="lgpdRefuse">Recusar</button>
-        <button class="btn primary" id="lgpdAccept">Aceitar</button>
+        <button class="btn ghost" id="lgpdRefuse" type="button">Recusar</button>
+        <button class="btn primary" id="lgpdAccept" type="button">Aceitar</button>
       </div>
     </div>
   </div>
@@ -49,7 +53,7 @@
         <p>Receitas que atravessam gerações, ingredientes da nossa terra e aquele tempero que lembra casa.</p>
         <div class="hero-actions">
           <a class="btn primary" href="#cardapio">Ver cardápio</a>
-          <button class="btn ghost" id="loginButton">Entrar na minha conta</button>
+          <button class="btn ghost" id="loginButton" type="button">Entrar na minha conta</button>
         </div>
         <div class="unit-line">
           <span class="dot"></span>
@@ -75,10 +79,10 @@
         <p>Escolha a unidade para ver a disponibilidade.</p>
       </div>
       <div class="filters" role="group" aria-label="Categorias do cardápio">
-        <button class="filter active" data-category="Todos">Todos</button>
-        <button class="filter" data-category="Pratos">Pratos</button>
-        <button class="filter" data-category="Lanches">Lanches</button>
-        <button class="filter" data-category="Bebidas">Bebidas</button>
+        <button class="filter active" data-category="Todos" type="button">Todos</button>
+        <button class="filter" data-category="Pratos" type="button">Pratos</button>
+        <button class="filter" data-category="Lanches" type="button">Lanches</button>
+        <button class="filter" data-category="Bebidas" type="button">Bebidas</button>
       </div>
       <div id="menuGrid" class="menu-grid"></div>
     </section>
@@ -88,7 +92,7 @@
         <p class="eyebrow">Só hoje</p>
         <h2>Terça de raiz</h2>
         <p>Na compra de dois pratos principais, ganhe um suco de cajá.</p>
-        <button class="btn primary" id="promoButton">Quero aproveitar</button>
+        <button class="btn primary" id="promoButton" type="button">Quero aproveitar</button>
       </div>
       <div class="promo-badge">
         <strong>10%</strong>
@@ -107,7 +111,7 @@
           <span id="pointsLabel">620 pontos</span>
           <span>1.000 pontos</span>
         </div>
-        <button class="btn ghost" id="loginLoyalty">Ver meus benefícios</button>
+        <button class="btn ghost" id="loginLoyalty" type="button">Ver meus benefícios</button>
       </div>
       <div class="loyalty-card">
         <span>Seu saldo</span>
@@ -143,27 +147,28 @@
       <span><strong>Raízes</strong><small>do Nordeste</small></span>
     </div>
     <p>Projeto acadêmico • Rafael Ferreira Verissimo • RU 5000980</p>
-    <p>© 2026 Raízes do Nordeste · <a href="#" id="footerPrivacy">Privacidade</a></p>
+    <p>
+      © 2026 Raízes do Nordeste ·
+      <a href="#" id="footerPrivacy">Política de Privacidade (LGPD — Lei 13.709/2018)</a>
+    </p>
   </footer>
 
-  <!-- sacola lateral -->
   <aside class="drawer" id="cartDrawer" aria-hidden="true">
     <div class="drawer-head">
       <h2>Sua sacola</h2>
-      <button class="close" id="closeCart" aria-label="Fechar">×</button>
+      <button class="close" id="closeCart" type="button" aria-label="Fechar">×</button>
     </div>
     <div id="cartItems" class="cart-items"></div>
     <div class="cart-footer">
       <div><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
-      <button class="btn primary full" id="checkoutButton">Continuar para pagamento</button>
+      <button class="btn primary full" id="checkoutButton" type="button">Continuar para pagamento</button>
     </div>
   </aside>
   <div class="overlay" id="overlay"></div>
 
-  <!-- modal genérico (login, cadastro, pagamento, privacidade) -->
   <div class="modal" id="modal" aria-hidden="true">
     <div class="modal-box">
-      <button class="close" id="closeModal">×</button>
+      <button class="close" id="closeModal" type="button">×</button>
       <div id="modalContent"></div>
     </div>
   </div>
