@@ -1,34 +1,28 @@
 # LGPD e privacidade
 
-A privacidade faz parte da jornada do usuário neste protótipo.
+O protótipo aplica de forma **explícita** a **Lei nº 13.709, de 14 de agosto de 2018** (Lei Geral de Proteção de Dados Pessoais — LGPD).
 
 ## O que aparece na interface
 
-- **Banner de consentimento** na primeira visita (Aceitar / Recusar).
-- **Checkbox obrigatório** no login e no cadastro.
-- **Checkbox obrigatório** antes de enviar o pedido para o pagamento externo.
-- Link para a **Política de Privacidade** no banner, no rodapé e nos formulários.
+- **Banner** na primeira visita com o texto “LGPD — Lei nº 13.709/2018”, base legal (art. 7º, I) e botões Aceitar / Recusar.
+- **Checkbox obrigatório** no login e no cadastro, citando a Lei 13.709/2018.
+- **Checkbox obrigatório** no pagamento, com referência ao art. 7º, inciso I.
+- **Política de Privacidade** (modal) com: controlador, dados, finalidade, base legal, direitos do titular (art. 18) e aviso de protótipo acadêmico.
+- Link no **rodapé**: “Política de Privacidade (LGPD — Lei 13.709/2018)”.
 
 ## Dados tratados (demonstração)
 
-- Nome e e-mail (formulário de cadastro/login).
+- Nome e e-mail (cadastro/login).
 - Itens do pedido e unidade selecionada.
 
-Não são solicitados dados bancários. O pagamento é apenas simulado.
-
-## Minimização e transparência
-
-O protótipo pede só o necessário para a experiência acadêmica.
-A interface deixa claro que o pagamento ocorre em serviço externo e que não há coleta real de dados financeiros.
+Não são solicitados dados bancários.
 
 ## Consentimento
 
-Sem marcar o aceite, o usuário não consegue:
-- concluir o login/cadastro;
-- seguir para o pagamento.
+Sem marcar o aceite, o usuário não conclui login/cadastro nem o pagamento. Mensagens de erro citam a LGPD.
 
-A preferência do banner é guardada em `localStorage` (chave `rn_lgpd`) só para não reaparecer a cada reload — é um recurso de demonstração, não um armazenamento real de dados sensíveis.
+Preferência do banner em `localStorage` (`rn_lgpd`) apenas para a demonstração.
 
 ## Segurança
 
-Aplicação front-end de estudo. Não deve ser usada para processar pagamentos ou guardar informações sensíveis de verdade.
+Front-end acadêmico. Não processa pagamento real nem armazena dados sensíveis de produção.
