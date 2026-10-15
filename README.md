@@ -1,39 +1,20 @@
 # Raízes do Nordeste
 
-Sabor que tem história.
+Trabalho da UNINTER (Projeto Multidisciplinar / Front-End).
+Aluno: Rafael Ferreira Verissimo — RU 5000980
 
-Projeto da faculdade (UNINTER) — Rafael Ferreira Verissimo · RU 5000980
+Site de uma lanchonete nordestina fictícia. Fiz em HTML, CSS e JS puro pra mostrar o fluxo de pedido: escolher unidade, montar a sacola, login/cadastro com LGPD, pagamento simulado e status do pedido.
 
-## O que é
+**Ver online:** https://farrei.github.io/raizes-do-nordeste/
 
-Site de lanchonete nordestina: cardápio por unidade, sacola, pedido, status, fidelidade e LGPD na tela.
-Pagamento é só simulação (não pede dado de cartão).
+Se quiser rodar na máquina, é só abrir o `index.html` no navegador.
 
-## Como ver
+---
 
-- Site: https://farrei.github.io/raizes-do-nordeste/
-- Código: este repositório
+`index.html` / `styles.css` / `script.js` — o site em si  
+`docs/` — requisitos, testes, LGPD e diagramas  
+`docs/img/` — figuras que usei no relatório
 
-Abrir o `index.html` local também funciona (sem build).
+Diagramas também estão no Figma: https://www.figma.com/design/OdPdpm2AkfFHB5OkO3lmmA
 
-## Arquivos
-
-| arquivo | pra quê |
-|---------|---------|
-| index.html | página |
-| styles.css | visual |
-| script.js | sacola, login, LGPD, pedido |
-| docs/ | requisitos, testes, diagramas |
-| docs/img/ | figuras dos diagramas e wireframes |
-
-## Diagramas
-
-- [Casos de uso](docs/img/casos-de-uso.svg)
-- [Jornada](docs/img/jornada.svg)
-- [Wireframes](docs/img/wireframes.svg)
-
-Figma: https://www.figma.com/design/OdPdpm2AkfFHB5OkO3lmmA
-
-## Observação
-
-Projeto acadêmico. Não processa pagamento real.
+Obs: pagamento não é real, é só pra demonstração da matéria.
