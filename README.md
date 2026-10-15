@@ -11,10 +11,14 @@ Se quiser rodar na máquina, é só abrir o `index.html` no navegador.
 
 ---
 
-`index.html` / `styles.css` / `script.js` — o site em si  
-`docs/` — requisitos, testes, LGPD e diagramas  
-`docs/img/` — figuras que usei no relatório
+`index.html` / `styles.css` / `script.js` — o site  
+`docs/` — requisitos, testes, LGPD  
+`docs/img/` — diagramas do relatório:
 
-Diagramas também estão no Figma: https://www.figma.com/design/OdPdpm2AkfFHB5OkO3lmmA
+- [Casos de uso](docs/img/casos-de-uso.svg)
+- [Jornada do usuário](docs/img/jornada.svg)
+- [Wireframes](docs/img/wireframes.svg)
+
+Também tem no Figma: https://www.figma.com/design/OdPdpm2AkfFHB5OkO3lmmA
 
 Obs: pagamento não é real, é só pra demonstração da matéria.
