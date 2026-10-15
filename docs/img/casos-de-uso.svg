@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="780" viewBox="0 0 1100 780">
+  <rect width="1100" height="780" fill="#faf8f5"/>
+  <text x="40" y="40" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#1a1410">Diagrama de Casos de Uso — Raízes do Nordeste</text>
+  <text x="40" y="65" font-family="Arial,sans-serif" font-size="13" fill="#666">Cliente · Atendente · Cozinha · Gerente · Pagamento externo</text>
+  <rect x="220" y="90" width="660" height="620" rx="8" fill="#f7f1e8" stroke="#8b6914" stroke-width="2"/>
+  <text x="240" y="115" font-family="Arial,sans-serif" font-size="12" fill="#8b6914">Sistema (Web / App / Totem)</text>
+  <circle cx="80" cy="220" r="18" fill="#d4a017" stroke="#333"/>
+  <line x1="80" y1="238" x2="80" y2="280" stroke="#333" stroke-width="2"/>
+  <text x="80" y="305" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="bold">Cliente</text>
+  <circle cx="80" cy="400" r="18" fill="#d4a017" stroke="#333"/>
+  <line x1="80" y1="418" x2="80" y2="460" stroke="#333" stroke-width="2"/>
+  <text x="80" y="485" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="bold">Atendente</text>
+  <circle cx="80" cy="560" r="18" fill="#d4a017" stroke="#333"/>
+  <line x1="80" y1="578" x2="80" y2="620" stroke="#333" stroke-width="2"/>
+  <text x="80" y="645" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold">Gerente</text>
+  <circle cx="1020" cy="300" r="18" fill="#d4a017" stroke="#333"/>
+  <line x1="1020" y1="318" x2="1020" y2="360" stroke="#333" stroke-width="2"/>
+  <text x="1020" y="385" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="bold">Cozinha</text>
+  <circle cx="1020" cy="500" r="18" fill="#d4a017" stroke="#333"/>
+  <line x1="1020" y1="518" x2="1020" y2="560" stroke="#333" stroke-width="2"/>
+  <text x="1020" y="585" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold">Pagamento</text>
+  <g font-family="Arial,sans-serif" font-size="11" text-anchor="middle">
+    <ellipse cx="350" cy="180" rx="100" ry="32" fill="#fff" stroke="#333"/>
+    <text x="350" y="184">UC01 Cadastro / login</text>
+    <ellipse cx="550" cy="180" rx="105" ry="32" fill="#fff" stroke="#333"/>
+    <text x="550" y="184">UC02 Cardápio / unidade</text>
+    <ellipse cx="750" cy="180" rx="100" ry="32" fill="#fff" stroke="#333"/>
+    <text x="750" y="184">UC03 Montar pedido</text>
+    <ellipse cx="350" cy="280" rx="100" ry="32" fill="#fff" stroke="#333"/>
+    <text x="350" y="284">UC04 Consentimento LGPD</text>
+    <ellipse cx="550" cy="280" rx="105" ry="32" fill="#fff" stroke="#333"/>
+    <text x="550" y="284">UC05 Pagamento externo</text>
+    <ellipse cx="750" cy="280" rx="100" ry="32" fill="#fff" stroke="#333"/>
+    <text x="750" y="284">UC06 Status do pedido</text>
+    <ellipse cx="350" cy="380" rx="100" ry="32" fill="#fff" stroke="#333"/>
+    <text x="350" y="384">UC07 Fidelidade</text>
+    <ellipse cx="550" cy="380" rx="105" ry="32" fill="#fff" stroke="#333"/>
+    <text x="550" y="384">UC08 Promoções</text>
+    <ellipse cx="750" cy="380" rx="100" ry="32" fill="#fff" stroke="#333"/>
+    <text x="750" y="384">UC09 Gerenciar cardápio</text>
+    <ellipse cx="550" cy="500" rx="105" ry="32" fill="#fff" stroke="#333"/>
+    <text x="550" y="504">UC10 Preparar (cozinha)</text>
+    <ellipse cx="750" cy="500" rx="100" ry="32" fill="#fff" stroke="#333"/>
+    <text x="750" y="504">UC11 Atender pedido</text>
+  </g>
+  <g stroke="#999" stroke-width="1" fill="none">
+    <line x1="98" y1="230" x2="250" y2="180"/>
+    <line x1="98" y1="230" x2="250" y2="280"/>
+    <line x1="98" y1="240" x2="450" y2="180"/>
+    <line x1="98" y1="250" x2="650" y2="180"/>
+    <line x1="98" y1="250" x2="650" y2="280"/>
+    <line x1="98" y1="260" x2="450" y2="380"/>
+    <line x1="98" y1="410" x2="650" y2="500"/>
+    <line x1="98" y1="570" x2="650" y2="380"/>
+    <line x1="1000" y1="310" x2="655" y2="500"/>
+    <line x1="1000" y1="500" x2="655" y2="280"/>
+  </g>
+  <text x="40" y="750" font-family="Arial,sans-serif" font-size="11" fill="#666">Elaborado para o projeto acadêmico · UNINTER 2026</text>
+</svg>

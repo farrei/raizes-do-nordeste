@@ -1,28 +1,16 @@
-# Diagramas e wireframes
+# Diagramas
 
-## Arquivos no Figma
+Arquivos na pasta `docs/img/`:
 
-### 1. Fluxo / FigJam (original)
-https://www.figma.com/board/cQKDdLkd85EnK6XarmNyr4
+- [casos-de-uso.svg](img/casos-de-uso.svg) — casos de uso (atores e UC01–UC11)
+- [jornada.svg](img/jornada.svg) — jornada do cliente
+- [wireframes.svg](img/wireframes.svg) — wireframes mobile e desktop
 
-Representa o fluxo principal: Cliente → Cadastro/autenticação → Cardápio → Pedido → Pagamento externo → Acompanhamento, com Cozinha, Atendente, Gerente e LGPD.
+## Figma
 
-### 2. Diagramas UML + Wireframes (entrega)
-https://www.figma.com/design/OdPdpm2AkfFHB5OkO3lmmA
+Versão editável:
 
-**Página 1 — Casos de Uso e Jornada**
-- Diagrama de Casos de Uso (formato elipse + atores)
-- Atores: Cliente, Atendente, Cozinha, Gerente/Administrador, Sistema de Pagamento Externo
-- Casos UC01–UC11 (cadastro, cardápio, pedido, LGPD, pagamento, status, fidelidade, promoções, cozinha, atendente)
-- Jornada do usuário em 9 etapas (Descoberta → Fidelidade)
+- https://www.figma.com/design/OdPdpm2AkfFHB5OkO3lmmA
+- https://www.figma.com/board/cQKDdLkd85EnK6XarmNyr4
 
-**Página 2 — Wireframes de baixa fidelidade**
-- Mobile (375px): Home, Sacola/Checkout, Login/Cadastro, Acompanhamento
-- Desktop (1280px): Home/Cardápio e Acompanhamento
-- Notas sobre multicanalidade (Web implementado; App e Totem no escopo)
-
-## Uso no PDF da entrega
-
-Exportar as páginas (ou trechos) como PNG/PDF e inserir nas seções:
-- DIAGRAMAS (casos de uso + jornada)
-- WIREFRAME (mobile e desktop)
+No PDF da entrega as figuras foram exportadas a partir desses artefatos.

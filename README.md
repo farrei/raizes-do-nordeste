@@ -1,50 +1,39 @@
 # Raízes do Nordeste
 
-**Sabor que tem história.**
+Sabor que tem história.
 
-Projeto acadêmico — Rafael Ferreira Verissimo (RU 5000980)
+Projeto da faculdade (UNINTER) — Rafael Ferreira Verissimo · RU 5000980
 
-## Objetivo
+## O que é
 
-Protótipo web responsivo de restaurante nordestino, com cardápio por unidade, pedidos, acompanhamento de status, fidelidade, promoções, pagamento externo simulado e tratamento de privacidade (LGPD).
+Site de lanchonete nordestina: cardápio por unidade, sacola, pedido, status, fidelidade e LGPD na tela.
+Pagamento é só simulação (não pede dado de cartão).
 
-## Tecnologias
+## Como ver
 
-- HTML5
-- CSS3
-- JavaScript (vanilla)
-- GitHub Pages
+- Site: https://farrei.github.io/raizes-do-nordeste/
+- Código: este repositório
 
-## Estrutura
+Abrir o `index.html` local também funciona (sem build).
 
-- `index.html` — interface principal
-- `styles.css` — identidade visual e responsividade
-- `script.js` — interações e regras do protótipo
-- `docs/requisitos.md` — RF / RNF e atores
-- `docs/jornada.md` — jornada do usuário
-- `docs/plano-testes.md` — cenários de teste (positivos e negativos)
-- `docs/lgpd.md` — privacidade e consentimento
-- `docs/diagrama.md` — referência do diagrama no Figma
-- `.github/workflows/pages.yml` — deploy no GitHub Pages
+## Arquivos
 
-## Fluxos demonstráveis
+| arquivo | pra quê |
+|---------|---------|
+| index.html | página |
+| styles.css | visual |
+| script.js | sacola, login, LGPD, pedido |
+| docs/ | requisitos, testes, diagramas |
+| docs/img/ | figuras dos diagramas e wireframes |
 
-1. Seleção de unidade
-2. Filtros de cardápio
-3. Inclusão e remoção de itens na sacola
-4. Login e cadastro simulados (com consentimento LGPD)
-5. Banner de privacidade (Aceitar / Recusar)
-6. Pagamento externo simulado (com checkbox LGPD)
-7. Confirmação do pedido + número
-8. Acompanhamento automático: Recebido → Em preparo → Pronto → Retirada
-9. Fidelidade e promoções
+## Diagramas
 
-## Links
+- [Casos de uso](docs/img/casos-de-uso.svg)
+- [Jornada](docs/img/jornada.svg)
+- [Wireframes](docs/img/wireframes.svg)
 
-- Repositório: https://github.com/farrei/raizes-do-nordeste
-- Site publicado: https://farrei.github.io/raizes-do-nordeste/
-- Diagrama Figma: https://www.figma.com/board/cQKDdLkd85EnK6XarmNyr4
+Figma: https://www.figma.com/design/OdPdpm2AkfFHB5OkO3lmmA
 
-## Observações
+## Observação
 
-O pagamento é apenas simulação acadêmica. Nenhum dado financeiro real é coletado ou processado.
+Projeto acadêmico. Não processa pagamento real.

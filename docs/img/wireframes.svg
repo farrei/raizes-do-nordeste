@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="900" viewBox="0 0 1000 900">
+  <rect width="1000" height="900" fill="#faf8f5"/>
+  <text x="30" y="36" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#1a1410">Wireframes (baixa fidelidade)</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="12" fill="#666">Mobile e desktop — só estrutura, sem visual final</text>
+  <text x="40" y="95" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#c47a2c">MOBILE</text>
+  <rect x="40" y="110" width="160" height="420" rx="12" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="50" y="105" font-family="Arial,sans-serif" font-size="11" fill="#666">Home</text>
+  <rect x="50" y="125" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="58" y="153" font-family="Arial,sans-serif" font-size="10" fill="#333">Header</text>
+  <rect x="50" y="183" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="58" y="211" font-family="Arial,sans-serif" font-size="10" fill="#333">Hero + CTA</text>
+  <rect x="50" y="241" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="58" y="269" font-family="Arial,sans-serif" font-size="10" fill="#333">Unidade</text>
+  <rect x="50" y="299" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="58" y="327" font-family="Arial,sans-serif" font-size="10" fill="#333">Filtros</text>
+  <rect x="50" y="357" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="58" y="385" font-family="Arial,sans-serif" font-size="10" fill="#333">Cards</text>
+  <rect x="50" y="415" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="58" y="443" font-family="Arial,sans-serif" font-size="10" fill="#333">Banner LGPD</text>
+  <rect x="220" y="110" width="160" height="420" rx="12" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="230" y="105" font-family="Arial,sans-serif" font-size="11" fill="#666">Sacola</text>
+  <rect x="230" y="125" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="238" y="153" font-family="Arial,sans-serif" font-size="10" fill="#333">Header</text>
+  <rect x="230" y="183" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="238" y="211" font-family="Arial,sans-serif" font-size="10" fill="#333">Item 1</text>
+  <rect x="230" y="241" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="238" y="269" font-family="Arial,sans-serif" font-size="10" fill="#333">Item 2</text>
+  <rect x="230" y="299" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="238" y="327" font-family="Arial,sans-serif" font-size="10" fill="#333">Total</text>
+  <rect x="230" y="357" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="238" y="385" font-family="Arial,sans-serif" font-size="10" fill="#333">Pagar</text>
+  <rect x="230" y="415" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="238" y="443" font-family="Arial,sans-serif" font-size="10" fill="#333">Check LGPD</text>
+  <rect x="400" y="110" width="160" height="420" rx="12" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="410" y="105" font-family="Arial,sans-serif" font-size="11" fill="#666">Login</text>
+  <rect x="410" y="125" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="418" y="153" font-family="Arial,sans-serif" font-size="10" fill="#333">Título</text>
+  <rect x="410" y="183" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="418" y="211" font-family="Arial,sans-serif" font-size="10" fill="#333">E-mail</text>
+  <rect x="410" y="241" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="418" y="269" font-family="Arial,sans-serif" font-size="10" fill="#333">Senha</text>
+  <rect x="410" y="299" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="418" y="327" font-family="Arial,sans-serif" font-size="10" fill="#333">Checkbox LGPD</text>
+  <rect x="410" y="357" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="418" y="385" font-family="Arial,sans-serif" font-size="10" fill="#333">Entrar</text>
+  <rect x="580" y="110" width="160" height="420" rx="12" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="590" y="105" font-family="Arial,sans-serif" font-size="11" fill="#666">Pedido</text>
+  <rect x="590" y="125" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="598" y="153" font-family="Arial,sans-serif" font-size="10" fill="#333">Header</text>
+  <rect x="590" y="183" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="598" y="211" font-family="Arial,sans-serif" font-size="10" fill="#333">Título</text>
+  <rect x="590" y="241" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="598" y="269" font-family="Arial,sans-serif" font-size="10" fill="#333">Tracker 1-4</text>
+  <rect x="590" y="299" width="140" height="48" rx="4" fill="#ebe6df" stroke="#aaa"/><text x="598" y="327" font-family="Arial,sans-serif" font-size="10" fill="#333">Status texto</text>
+  <text x="40" y="570" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#c47a2c">DESKTOP</text>
+  <rect x="40" y="590" width="700" height="260" rx="8" fill="#fff" stroke="#333" stroke-width="2"/>
+  <rect x="50" y="600" width="680" height="36" rx="4" fill="#ebe6df" stroke="#aaa"/>
+  <text x="60" y="623" font-family="Arial,sans-serif" font-size="11" fill="#333">Nav: Início · Cardápio · Fidelidade · Promoções · Pedido · Sacola</text>
+  <rect x="50" y="650" width="320" height="100" rx="4" fill="#ebe6df" stroke="#aaa"/>
+  <text x="60" y="700" font-family="Arial,sans-serif" font-size="11" fill="#333">Hero + CTA + unidade</text>
+  <rect x="390" y="650" width="340" height="100" rx="4" fill="#ebe6df" stroke="#aaa"/>
+  <text x="500" y="700" font-family="Arial,sans-serif" font-size="11" fill="#333">Imagem</text>
+  <rect x="50" y="765" width="210" height="70" rx="4" fill="#ebe6df" stroke="#aaa"/>
+  <rect x="280" y="765" width="210" height="70" rx="4" fill="#ebe6df" stroke="#aaa"/>
+  <rect x="510" y="765" width="210" height="70" rx="4" fill="#ebe6df" stroke="#aaa"/>
+  <text x="60" y="805" font-family="Arial,sans-serif" font-size="10" fill="#333">Card produto</text>
+  <text x="290" y="805" font-family="Arial,sans-serif" font-size="10" fill="#333">Card produto</text>
+  <text x="520" y="805" font-family="Arial,sans-serif" font-size="10" fill="#333">Card produto</text>
+  <text x="30" y="880" font-family="Arial,sans-serif" font-size="11" fill="#666">Projeto Raízes do Nordeste · 2026</text>
+</svg>

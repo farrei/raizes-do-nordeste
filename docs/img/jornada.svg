@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <rect width="1200" height="320" fill="#faf8f5"/>
+  <text x="30" y="36" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#1a1410">Jornada do usuário (Cliente)</text>
+  <rect x="30" y="70" width="115" height="100" rx="10" fill="#f7ead8" stroke="#c47a2c" stroke-width="2"/>
+  <text x="38" y="95" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#8b4513">1. Descoberta</text>
+  <text x="38" y="120" font-family="Arial,sans-serif" font-size="11" fill="#333">Acessa o site</text>
+  <text x="148" y="125" font-family="Arial,sans-serif" font-size="18" fill="#c47a2c">→</text>
+  <rect x="160" y="70" width="115" height="100" rx="10" fill="#f7ead8" stroke="#c47a2c" stroke-width="2"/>
+  <text x="168" y="95" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#8b4513">2. Unidade</text>
+  <text x="168" y="120" font-family="Arial,sans-serif" font-size="11" fill="#333">Escolhe a loja</text>
+  <text x="278" y="125" font-family="Arial,sans-serif" font-size="18" fill="#c47a2c">→</text>
+  <rect x="290" y="70" width="115" height="100" rx="10" fill="#f7ead8" stroke="#c47a2c" stroke-width="2"/>
+  <text x="298" y="95" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#8b4513">3. Cardápio</text>
+  <text x="298" y="120" font-family="Arial,sans-serif" font-size="11" fill="#333">Filtra e vê preços</text>
+  <text x="408" y="125" font-family="Arial,sans-serif" font-size="18" fill="#c47a2c">→</text>
+  <rect x="420" y="70" width="115" height="100" rx="10" fill="#f7ead8" stroke="#c47a2c" stroke-width="2"/>
+  <text x="428" y="95" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#8b4513">4. Sacola</text>
+  <text x="428" y="120" font-family="Arial,sans-serif" font-size="11" fill="#333">Adiciona itens</text>
+  <text x="538" y="125" font-family="Arial,sans-serif" font-size="18" fill="#c47a2c">→</text>
+  <rect x="550" y="70" width="115" height="100" rx="10" fill="#f7ead8" stroke="#c47a2c" stroke-width="2"/>
+  <text x="558" y="95" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#8b4513">5. Conta</text>
+  <text x="558" y="120" font-family="Arial,sans-serif" font-size="11" fill="#333">Login + LGPD</text>
+  <text x="668" y="125" font-family="Arial,sans-serif" font-size="18" fill="#c47a2c">→</text>
+  <rect x="680" y="70" width="115" height="100" rx="10" fill="#f7ead8" stroke="#c47a2c" stroke-width="2"/>
+  <text x="688" y="95" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#8b4513">6. Pagamento</text>
+  <text x="688" y="120" font-family="Arial,sans-serif" font-size="11" fill="#333">Serviço externo</text>
+  <text x="798" y="125" font-family="Arial,sans-serif" font-size="18" fill="#c47a2c">→</text>
+  <rect x="810" y="70" width="115" height="100" rx="10" fill="#f7ead8" stroke="#c47a2c" stroke-width="2"/>
+  <text x="818" y="95" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#8b4513">7. Confirma</text>
+  <text x="818" y="120" font-family="Arial,sans-serif" font-size="11" fill="#333">Nº do pedido</text>
+  <text x="928" y="125" font-family="Arial,sans-serif" font-size="18" fill="#c47a2c">→</text>
+  <rect x="940" y="70" width="115" height="100" rx="10" fill="#f7ead8" stroke="#c47a2c" stroke-width="2"/>
+  <text x="948" y="95" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#8b4513">8. Status</text>
+  <text x="948" y="120" font-family="Arial,sans-serif" font-size="11" fill="#333">Preparo → Pronto</text>
+  <text x="30" y="220" font-family="Arial,sans-serif" font-size="12" fill="#555">Pontos de atenção: confiança (LGPD), clareza do cardápio, status do pedido</text>
+  <text x="30" y="280" font-family="Arial,sans-serif" font-size="11" fill="#666">Projeto Raízes do Nordeste · 2026</text>
+</svg>
