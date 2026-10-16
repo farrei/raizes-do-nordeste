@@ -1,76 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="980" viewBox="0 0 1100 980">
-  <rect width="1100" height="980" fill="#faf7f2"/>
-  <text x="40" y="40" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#1a1410">Diagrama de Casos de Uso</text>
-  <text x="40" y="66" font-family="Arial,sans-serif" font-size="14" fill="#6b5e52">Raízes do Nordeste · Sistema de pedidos multicanal</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="920" viewBox="0 0 1100 920">
+  <rect width="1100" height="920" fill="#f7f7f8"/>
+  <text x="40" y="40" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#1c1c1e">Diagrama de Casos de Uso</text>
+  <text x="40" y="66" font-family="Arial,sans-serif" font-size="14" fill="#73737a">Raízes do Nordeste — quem interage com cada função do sistema</text>
 
-  <rect x="250" y="100" width="560" height="800" rx="12" fill="#f5ede3" stroke="#8b6914" stroke-width="2"/>
-  <text x="270" y="128" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#a05a12">Sistema Raízes do Nordeste</text>
-  <text x="270" y="148" font-family="Arial,sans-serif" font-size="11" fill="#6b5e52">(Web · App · Totem)</text>
+  <!-- actors panel -->
+  <rect x="40" y="100" width="280" height="420" rx="16" fill="#fff" stroke="#e0e0e4"/>
+  <text x="60" y="128" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#73737a">ATORES</text>
+  <circle cx="72" cy="168" r="12" fill="#2563eb"/>
+  <text x="96" y="164" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1c1c1e">Cliente</text>
+  <text x="96" y="182" font-family="Arial,sans-serif" font-size="12" fill="#73737a">Pede, paga e acompanha</text>
+  <circle cx="72" cy="228" r="12" fill="#7c3aed"/>
+  <text x="96" y="224" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1c1c1e">Atendente</text>
+  <text x="96" y="242" font-family="Arial,sans-serif" font-size="12" fill="#73737a">Entrega o pedido</text>
+  <circle cx="72" cy="288" r="12" fill="#059669"/>
+  <text x="96" y="284" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1c1c1e">Cozinha</text>
+  <text x="96" y="302" font-family="Arial,sans-serif" font-size="12" fill="#73737a">Prepara o pedido</text>
+  <circle cx="72" cy="348" r="12" fill="#d97706"/>
+  <text x="96" y="344" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1c1c1e">Gerente</text>
+  <text x="96" y="362" font-family="Arial,sans-serif" font-size="12" fill="#73737a">Cardápio e campanhas</text>
+  <circle cx="72" cy="408" r="12" fill="#db2777"/>
+  <text x="96" y="404" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1c1c1e">Pagamento externo</text>
+  <text x="96" y="422" font-family="Arial,sans-serif" font-size="12" fill="#73737a">Gateway simulado</text>
 
-  <!-- associations (behind) -->
-  <g stroke="#8a7a6a" stroke-width="1.5" fill="none">
-    <line x1="120" y1="340" x2="400" y2="195"/>
-    <line x1="120" y1="340" x2="400" y2="255"/>
-    <line x1="120" y1="340" x2="400" y2="315"/>
-    <line x1="120" y1="340" x2="400" y2="375"/>
-    <line x1="120" y1="340" x2="400" y2="435"/>
-    <line x1="120" y1="340" x2="400" y2="495"/>
-    <line x1="120" y1="340" x2="400" y2="555"/>
-    <line x1="120" y1="340" x2="400" y2="615"/>
-    <line x1="120" y1="560" x2="400" y2="795"/>
-    <line x1="120" y1="720" x2="400" y2="735"/>
-    <line x1="980" y1="320" x2="700" y2="435"/>
-    <line x1="980" y1="560" x2="700" y2="795"/>
+  <!-- system panel -->
+  <rect x="350" y="100" width="710" height="640" rx="16" fill="#f8f8fa" stroke="#e0e0e4"/>
+  <text x="370" y="128" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#73737a">SISTEMA  ·  Web / App / Totem</text>
+
+  <!-- UC rows -->
+  <g font-family="Arial,sans-serif">
+    <!-- UC01 -->
+    <rect x="370" y="150" width="670" height="44" rx="10" fill="#fff" stroke="#e0e0e4"/>
+    <rect x="370" y="150" width="5" height="44" rx="2" fill="#2563eb"/>
+    <text x="390" y="178" font-size="12" font-weight="bold" fill="#73737a">UC01</text>
+    <text x="450" y="178" font-size="14" fill="#1c1c1e">Cadastrar / autenticar</text>
+    <circle cx="1005" cy="172" r="8" fill="#2563eb"/>
+    <!-- UC02 -->
+    <rect x="370" y="202" width="670" height="44" rx="10" fill="#fff" stroke="#e0e0e4"/>
+    <rect x="370" y="202" width="5" height="44" fill="#2563eb"/>
+    <text x="390" y="230" font-size="12" font-weight="bold" fill="#73737a">UC02</text>
+    <text x="450" y="230" font-size="14" fill="#1c1c1e">Consultar cardápio por unidade</text>
+    <circle cx="1005" cy="224" r="8" fill="#2563eb"/>
+    <!-- UC03 -->
+    <rect x="370" y="254" width="670" height="44" rx="10" fill="#fff" stroke="#e0e0e4"/>
+    <rect x="370" y="254" width="5" height="44" fill="#2563eb"/>
+    <text x="390" y="282" font-size="12" font-weight="bold" fill="#73737a">UC03</text>
+    <text x="450" y="282" font-size="14" fill="#1c1c1e">Montar pedido (sacola)</text>
+    <circle cx="1005" cy="276" r="8" fill="#2563eb"/>
+    <!-- UC04 -->
+    <rect x="370" y="306" width="670" height="44" rx="10" fill="#fff" stroke="#e0e0e4"/>
+    <rect x="370" y="306" width="5" height="44" fill="#2563eb"/>
+    <text x="390" y="334" font-size="12" font-weight="bold" fill="#73737a">UC04</text>
+    <text x="450" y="334" font-size="14" fill="#1c1c1e">Registrar consentimento LGPD</text>
+    <circle cx="1005" cy="328" r="8" fill="#2563eb"/>
+    <!-- UC05 -->
+    <rect x="370" y="358" width="670" height="44" rx="10" fill="#fff" stroke="#e0e0e4"/>
+    <rect x="370" y="358" width="5" height="44" fill="#2563eb"/>
+    <text x="390" y="386" font-size="12" font-weight="bold" fill="#73737a">UC05</text>
+    <text x="450" y="386" font-size="14" fill="#1c1c1e">Solicitar pagamento externo</text>
+    <circle cx="980" cy="380" r="8" fill="#2563eb"/>
+    <circle cx="1005" cy="380" r="8" fill="#db2777"/>
+    <!-- UC06 -->
+    <rect x="370" y="410" width="670" height="44" rx="10" fill="#fff" stroke="#e0e0e4"/>
+    <rect x="370" y="410" width="5" height="44" fill="#2563eb"/>
+    <text x="390" y="438" font-size="12" font-weight="bold" fill="#73737a">UC06</text>
+    <text x="450" y="438" font-size="14" fill="#1c1c1e">Acompanhar status do pedido</text>
+    <circle cx="1005" cy="432" r="8" fill="#2563eb"/>
+    <!-- UC07 -->
+    <rect x="370" y="462" width="670" height="44" rx="10" fill="#fff" stroke="#e0e0e4"/>
+    <rect x="370" y="462" width="5" height="44" fill="#2563eb"/>
+    <text x="390" y="490" font-size="12" font-weight="bold" fill="#73737a">UC07</text>
+    <text x="450" y="490" font-size="14" fill="#1c1c1e">Consultar fidelidade</text>
+    <circle cx="1005" cy="484" r="8" fill="#2563eb"/>
+    <!-- UC08 -->
+    <rect x="370" y="514" width="670" height="44" rx="10" fill="#fff" stroke="#e0e0e4"/>
+    <rect x="370" y="514" width="5" height="44" fill="#2563eb"/>
+    <text x="390" y="542" font-size="12" font-weight="bold" fill="#73737a">UC08</text>
+    <text x="450" y="542" font-size="14" fill="#1c1c1e">Visualizar promoções</text>
+    <circle cx="1005" cy="536" r="8" fill="#2563eb"/>
+    <!-- UC09 -->
+    <rect x="370" y="566" width="670" height="44" rx="10" fill="#fff" stroke="#e0e0e4"/>
+    <rect x="370" y="566" width="5" height="44" fill="#d97706"/>
+    <text x="390" y="594" font-size="12" font-weight="bold" fill="#73737a">UC09</text>
+    <text x="450" y="594" font-size="14" fill="#1c1c1e">Gerenciar cardápio</text>
+    <circle cx="1005" cy="588" r="8" fill="#d97706"/>
+    <!-- UC10 -->
+    <rect x="370" y="618" width="670" height="44" rx="10" fill="#fff" stroke="#e0e0e4"/>
+    <rect x="370" y="618" width="5" height="44" fill="#059669"/>
+    <text x="390" y="646" font-size="12" font-weight="bold" fill="#73737a">UC10</text>
+    <text x="450" y="646" font-size="14" fill="#1c1c1e">Preparar pedido</text>
+    <circle cx="1005" cy="640" r="8" fill="#059669"/>
+    <!-- UC11 -->
+    <rect x="370" y="670" width="670" height="44" rx="10" fill="#fff" stroke="#e0e0e4"/>
+    <rect x="370" y="670" width="5" height="44" fill="#7c3aed"/>
+    <text x="390" y="698" font-size="12" font-weight="bold" fill="#73737a">UC11</text>
+    <text x="450" y="698" font-size="14" fill="#1c1c1e">Atender / entregar pedido</text>
+    <circle cx="1005" cy="692" r="8" fill="#7c3aed"/>
   </g>
 
-  <!-- use cases column -->
-  <g font-family="Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a1410">
-    <ellipse cx="530" cy="195" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="200">UC01  Cadastrar / autenticar</text>
-    <ellipse cx="530" cy="255" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="260">UC02  Cardápio por unidade</text>
-    <ellipse cx="530" cy="315" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="320">UC03  Montar pedido</text>
-    <ellipse cx="530" cy="375" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="380">UC04  Consentimento LGPD</text>
-    <ellipse cx="530" cy="435" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="440">UC05  Pagamento externo</text>
-    <ellipse cx="530" cy="495" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="500">UC06  Status do pedido</text>
-    <ellipse cx="530" cy="555" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="560">UC07  Fidelidade</text>
-    <ellipse cx="530" cy="615" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="620">UC08  Promoções</text>
-    <ellipse cx="530" cy="735" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="740">UC09  Gerenciar cardápio</text>
-    <ellipse cx="530" cy="795" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="800">UC10  Preparar pedido</text>
-    <ellipse cx="530" cy="855" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="860">UC11  Atender / entregar</text>
-  </g>
+  <!-- associations legend -->
+  <rect x="40" y="540" width="280" height="200" rx="16" fill="#fff" stroke="#e0e0e4"/>
+  <text x="60" y="568" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#73737a">ASSOCIAÇÕES</text>
+  <circle cx="68" cy="598" r="7" fill="#2563eb"/>
+  <text x="86" y="603" font-family="Arial,sans-serif" font-size="12" fill="#1c1c1e">Cliente → UC01–UC08</text>
+  <circle cx="68" cy="626" r="7" fill="#db2777"/>
+  <text x="86" y="631" font-family="Arial,sans-serif" font-size="12" fill="#1c1c1e">Pagamento → UC05</text>
+  <circle cx="68" cy="654" r="7" fill="#d97706"/>
+  <text x="86" y="659" font-family="Arial,sans-serif" font-size="12" fill="#1c1c1e">Gerente → UC09</text>
+  <circle cx="68" cy="682" r="7" fill="#059669"/>
+  <text x="86" y="687" font-family="Arial,sans-serif" font-size="12" fill="#1c1c1e">Cozinha → UC10</text>
+  <circle cx="68" cy="710" r="7" fill="#7c3aed"/>
+  <text x="86" y="715" font-family="Arial,sans-serif" font-size="12" fill="#1c1c1e">Atendente → UC11</text>
 
-  <!-- stick actors left -->
-  <g fill="#d9a03a" stroke="#1a1410" stroke-width="1.5">
-    <circle cx="80" cy="310" r="14"/>
-    <circle cx="80" cy="530" r="14"/>
-    <circle cx="80" cy="690" r="14"/>
-  </g>
-  <g stroke="#1a1410" stroke-width="2.5" fill="none">
-    <line x1="80" y1="324" x2="80" y2="360"/><line x1="64" y1="340" x2="96" y2="340"/><line x1="80" y1="360" x2="66" y2="385"/><line x1="80" y1="360" x2="94" y2="385"/>
-    <line x1="80" y1="544" x2="80" y2="580"/><line x1="64" y1="560" x2="96" y2="560"/><line x1="80" y1="580" x2="66" y2="605"/><line x1="80" y1="580" x2="94" y2="605"/>
-    <line x1="80" y1="704" x2="80" y2="740"/><line x1="64" y1="720" x2="96" y2="720"/><line x1="80" y1="740" x2="66" y2="765"/><line x1="80" y1="740" x2="94" y2="765"/>
-  </g>
-  <g font-family="Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1a1410">
-    <text x="80" y="405">Cliente</text>
-    <text x="80" y="625">Atendente</text>
-    <text x="80" y="785">Gerente</text>
-  </g>
-
-  <!-- stick actors right -->
-  <g fill="#d9a03a" stroke="#1a1410" stroke-width="1.5">
-    <circle cx="1020" cy="300" r="14"/>
-    <circle cx="1020" cy="540" r="14"/>
-  </g>
-  <g stroke="#1a1410" stroke-width="2.5" fill="none">
-    <line x1="1020" y1="314" x2="1020" y2="350"/><line x1="1004" y1="330" x2="1036" y2="330"/><line x1="1020" y1="350" x2="1006" y2="375"/><line x1="1020" y1="350" x2="1034" y2="375"/>
-    <line x1="1020" y1="554" x2="1020" y2="590"/><line x1="1004" y1="570" x2="1036" y2="570"/><line x1="1020" y1="590" x2="1006" y2="615"/><line x1="1020" y1="590" x2="1034" y2="615"/>
-  </g>
-  <g font-family="Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1a1410">
-    <text x="1020" y="400">Pagamento</text>
-    <text x="1020" y="415" font-size="10" font-weight="normal">externo</text>
-    <text x="1020" y="635">Cozinha</text>
-  </g>
-
-  <text x="40" y="940" font-family="Arial,sans-serif" font-size="11" fill="#6b5e52">Convenção UML: boneco = ator · elipse = caso de uso · linha = associação (participa)</text>
-  <text x="40" y="960" font-family="Arial,sans-serif" font-size="11" fill="#999">Projeto acadêmico · UNINTER 2026</text>
+  <text x="40" y="880" font-family="Arial,sans-serif" font-size="12" fill="#73737a">Cores = quem participa. Sem linhas cruzadas — leitura direta.</text>
+  <text x="40" y="900" font-family="Arial,sans-serif" font-size="11" fill="#a1a1a8">UNINTER 2026 · Projeto Front-End</text>
 </svg>
