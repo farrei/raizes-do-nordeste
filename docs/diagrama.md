@@ -1,24 +1,24 @@
-# Diagramas
+# Diagramas e wireframes
 
-## FigJam (principal)
-
-**Raízes do Nordeste — Fluxo do Sistema**
+## FigJam — fluxo do sistema
 
 https://www.figma.com/board/cQKDdLkd85EnK6XarmNyr4
 
-Conteúdo do quadro:
+- atores e funções (casos de uso)
+- jornada do pedido (com LGPD e pagamento)
 
-- atores: Cliente, Atendente, Cozinha, Gerente/Administrador, pagamento externo
-- funções: cadastro, cardápio por unidade, pedido, status, fidelidade, promoções, pagamento, LGPD
-- fluxo do pedido (jornada) com decisões de confirmação e pagamento
-- ramos de gerente e atendente
+## Figma Design — wireframes UX/UI
+
+https://www.figma.com/design/OdPdpm2AkfFHB5OkO3lmmA
+
+Página **2. Wireframes**:
+
+- Mobile: Home, Sacola/Checkout (+ LGPD), Login/Cadastro, Acompanhamento
+- Desktop: Home/Cardápio, Acompanhamento
+- Baixa fidelidade (arquitetura de informação)
 
 ## Arquivos em `docs/img/`
 
 - [casos-de-uso.svg](img/casos-de-uso.svg)
 - [jornada.svg](img/jornada.svg)
 - [wireframes.svg](img/wireframes.svg)
-
-## Design (wireframes / layout)
-
-https://www.figma.com/design/OdPdpm2AkfFHB5OkO3lmmA
