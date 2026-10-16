@@ -8,11 +8,11 @@ const menu = [
   { id: 6, name: "Suco de Cajá", category: "Bebidas", price: 9.90, desc: "Polpa de cajá, água e um toque de açúcar.", img: "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=80", units: ["Recife", "Fortaleza", "Salvador"] }
 ];
 
-// conta de teste (professor / correção)
+// conta de teste pra quem for avaliar o trabalho
 const DEMO = {
-  email: "professor@raizes.com",
-  senha: "Raizes@2026",
-  nome: "Professor"
+  email: "teste@teste.com",
+  senha: "123456",
+  nome: "Teste"
 };
 
 let cart = [];
@@ -40,7 +40,7 @@ function updateLoginButton() {
   if (user) {
     btn.textContent = "Olá, " + (user.nome || "cliente").split(" ")[0];
   } else {
-    btn.textContent = "Entrar na minha conta";
+    btn.textContent = "Entrar";
   }
 }
 
@@ -52,7 +52,7 @@ function renderMenu() {
   }
 
   if (!list.length) {
-    grid.innerHTML = "<p style='color:var(--muted)'>Nada disponível nessa categoria pra esta unidade.</p>";
+    grid.innerHTML = "<p style='color:var(--muted)'>Nada nessa categoria pra esta unidade.</p>";
     return;
   }
 
@@ -104,7 +104,7 @@ function renderCart() {
   $("#cartTotal").textContent = money(total);
 
   if (!cart.length) {
-    $("#cartItems").innerHTML = "<p style='color:var(--muted)'>Sua sacola está vazia.</p>";
+    $("#cartItems").innerHTML = "<p style='color:var(--muted)'>Sacola vazia.</p>";
     return;
   }
 
@@ -167,7 +167,7 @@ function acceptLgpd() {
 
 function refuseLgpd() {
   $("#lgpdBanner").style.display = "none";
-  toast("Ok. Algumas funções de conta ficam limitadas.");
+  toast("Ok. Algumas funções ficam limitadas.");
 }
 
 function showPrivacy() {
@@ -191,7 +191,6 @@ function openAuth(mode) {
     showModal(`
       <h2>Minha conta</h2>
       <p>Logado como <strong>${user.nome}</strong> (${user.email}).</p>
-      <p style="font-size:13px;color:var(--muted)">Demo acadêmica — sem servidor real.</p>
       <button class="btn primary full" id="doLogout" type="button" style="margin-top:14px">Sair</button>
     `);
     return;
@@ -216,13 +215,13 @@ function openAuth(mode) {
     showModal(`
       <h2>Entrar</h2>
       <p>Pedidos e pontos.</p>
-      <div style="background:#f4f1ec;border-radius:10px;padding:10px 12px;margin:10px 0 14px;font-size:12px;line-height:1.5">
-        <strong>Conta de teste (correção)</strong><br>
-        E-mail: <code>professor@raizes.com</code><br>
-        Senha: <code>Raizes@2026</code>
+      <div style="background:#f4f1ec;border:1px solid #e0d6cb;border-radius:6px;padding:10px 12px;margin:10px 0 14px;font-size:12px;line-height:1.5">
+        <strong>Conta de teste</strong><br>
+        E-mail: <code>teste@teste.com</code><br>
+        Senha: <code>123456</code>
       </div>
-      <input class="field" type="email" id="loginEmail" placeholder="E-mail" aria-label="E-mail" value="professor@raizes.com">
-      <input class="field" type="password" id="loginPass" placeholder="Senha" aria-label="Senha" value="Raizes@2026">
+      <input class="field" type="email" id="loginEmail" placeholder="E-mail" aria-label="E-mail" value="teste@teste.com">
+      <input class="field" type="password" id="loginPass" placeholder="Senha" aria-label="Senha" value="123456">
       <label class="check-label">
         <input type="checkbox" id="loginConsent">
         Concordo com a LGPD (Lei 13.709/2018) e a
@@ -308,8 +307,7 @@ $("#checkoutButton").onclick = () => {
 
   showModal(`
     <h2>Pagamento externo</h2>
-    <p>Você seria enviado a um provedor de pagamento. Aqui é só simulação —
-    <strong>não coletamos dado bancário</strong>.</p>
+    <p>Aqui é só simulação — <strong>não coletamos dado bancário</strong>.</p>
     <label class="check-label">
       <input type="checkbox" id="consent">
       Autorizo o tratamento dos dados do pedido (LGPD — Lei 13.709/2018, art. 7º, I).
@@ -334,11 +332,10 @@ document.addEventListener("click", (e) => {
       sessionStorage.setItem("rn_user", JSON.stringify(user));
       updateLoginButton();
       closeModal();
-      toast("Login ok — conta de teste do professor.");
+      toast("Login ok (conta de teste).");
       return;
     }
 
-    // cadastro feito nesta sessão (localStorage)
     try {
       const regs = JSON.parse(localStorage.getItem("rn_regs") || "[]");
       const found = regs.find((u) => u.email === email && u.senha === senha);
