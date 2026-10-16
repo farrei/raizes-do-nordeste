@@ -1,52 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="920" viewBox="0 0 1000 920">
-  <rect width="1000" height="920" fill="#faf8f5"/>
-  <text x="36" y="40" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#1a1410">Diagrama de Casos de Uso</text>
-  <text x="36" y="64" font-family="Arial,sans-serif" font-size="13" fill="#666">Raizes do Nordeste — quem faz o que no sistema</text>
-  <text x="36" y="100" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#888">ATORES</text>
-  <rect x="36" y="115" width="200" height="58" rx="8" fill="#fff5e6" stroke="#c47a2c" stroke-width="1.5"/>
-  <text x="50" y="140" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">Cliente</text>
-  <text x="50" y="158" font-family="Arial,sans-serif" font-size="11" fill="#666">Pede e acompanha</text>
-  <rect x="36" y="185" width="200" height="58" rx="8" fill="#fff5e6" stroke="#c47a2c" stroke-width="1.5"/>
-  <text x="50" y="210" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">Atendente</text>
-  <text x="50" y="228" font-family="Arial,sans-serif" font-size="11" fill="#666">Atende o pedido</text>
-  <rect x="36" y="255" width="200" height="58" rx="8" fill="#fff5e6" stroke="#c47a2c" stroke-width="1.5"/>
-  <text x="50" y="280" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">Cozinha</text>
-  <text x="50" y="298" font-family="Arial,sans-serif" font-size="11" fill="#666">Prepara o pedido</text>
-  <rect x="36" y="325" width="200" height="58" rx="8" fill="#fff5e6" stroke="#c47a2c" stroke-width="1.5"/>
-  <text x="50" y="350" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">Gerente</text>
-  <text x="50" y="368" font-family="Arial,sans-serif" font-size="11" fill="#666">Cardapio e campanhas</text>
-  <rect x="36" y="395" width="200" height="58" rx="8" fill="#fff5e6" stroke="#c47a2c" stroke-width="1.5"/>
-  <text x="50" y="420" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">Pagamento</text>
-  <text x="50" y="438" font-family="Arial,sans-serif" font-size="11" fill="#666">Servico externo</text>
-  <rect x="36" y="480" width="200" height="160" rx="8" fill="#fff" stroke="#ccc" stroke-width="1.5"/>
-  <text x="50" y="508" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#222">Quem usa o que</text>
-  <text x="50" y="535" font-family="Arial,sans-serif" font-size="12" fill="#333">Cliente = 1 a 7</text>
-  <text x="50" y="558" font-family="Arial,sans-serif" font-size="12" fill="#333">Cozinha = 8</text>
-  <text x="50" y="581" font-family="Arial,sans-serif" font-size="12" fill="#333">Atendente = 9</text>
-  <text x="50" y="604" font-family="Arial,sans-serif" font-size="12" fill="#333">Gerente = gestao</text>
-  <text x="50" y="627" font-family="Arial,sans-serif" font-size="12" fill="#333">Pagamento = 5</text>
-  <rect x="280" y="100" width="480" height="720" rx="10" fill="#f7f1e8" stroke="#8b6914" stroke-width="2"/>
-  <text x="300" y="130" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#8b6914">Sistema (Web / App / Totem)</text>
-  <text x="300" y="165" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#c47a2c">Cliente (app / site)</text>
-  <ellipse cx="520" cy="202" rx="160" ry="26" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <text x="520" y="207" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#222">1. Cadastrar / entrar</text>
-  <ellipse cx="520" cy="264" rx="160" ry="26" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <text x="520" y="269" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#222">2. Ver cardapio da unidade</text>
-  <ellipse cx="520" cy="326" rx="160" ry="26" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <text x="520" y="331" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#222">3. Montar pedido (sacola)</text>
-  <ellipse cx="520" cy="388" rx="160" ry="26" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <text x="520" y="393" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#222">4. Aceitar LGPD</text>
-  <ellipse cx="520" cy="450" rx="160" ry="26" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <text x="520" y="455" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#222">5. Pagar (servico externo)</text>
-  <ellipse cx="520" cy="512" rx="160" ry="26" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <text x="520" y="517" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#222">6. Acompanhar status</text>
-  <ellipse cx="520" cy="574" rx="160" ry="26" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <text x="520" y="579" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#222">7. Ver fidelidade / promo</text>
-  <text x="300" y="630" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#c47a2c">Equipe da loja</text>
-  <ellipse cx="520" cy="672" rx="160" ry="26" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <text x="520" y="677" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#222">8. Preparar pedido (cozinha)</text>
-  <ellipse cx="520" cy="734" rx="160" ry="26" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <text x="520" y="739" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#222">9. Atender / entregar</text>
-  <text x="36" y="900" font-family="Arial,sans-serif" font-size="12" fill="#666">Cada elipse = uma funcao. A lista ao lado mostra as associacoes sem emaranhado de linhas.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="980" viewBox="0 0 1100 980">
+  <rect width="1100" height="980" fill="#faf7f2"/>
+  <text x="40" y="40" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#1a1410">Diagrama de Casos de Uso</text>
+  <text x="40" y="66" font-family="Arial,sans-serif" font-size="14" fill="#6b5e52">Raízes do Nordeste · Sistema de pedidos multicanal</text>
+
+  <rect x="250" y="100" width="560" height="800" rx="12" fill="#f5ede3" stroke="#8b6914" stroke-width="2"/>
+  <text x="270" y="128" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#a05a12">Sistema Raízes do Nordeste</text>
+  <text x="270" y="148" font-family="Arial,sans-serif" font-size="11" fill="#6b5e52">(Web · App · Totem)</text>
+
+  <!-- associations (behind) -->
+  <g stroke="#8a7a6a" stroke-width="1.5" fill="none">
+    <line x1="120" y1="340" x2="400" y2="195"/>
+    <line x1="120" y1="340" x2="400" y2="255"/>
+    <line x1="120" y1="340" x2="400" y2="315"/>
+    <line x1="120" y1="340" x2="400" y2="375"/>
+    <line x1="120" y1="340" x2="400" y2="435"/>
+    <line x1="120" y1="340" x2="400" y2="495"/>
+    <line x1="120" y1="340" x2="400" y2="555"/>
+    <line x1="120" y1="340" x2="400" y2="615"/>
+    <line x1="120" y1="560" x2="400" y2="795"/>
+    <line x1="120" y1="720" x2="400" y2="735"/>
+    <line x1="980" y1="320" x2="700" y2="435"/>
+    <line x1="980" y1="560" x2="700" y2="795"/>
+  </g>
+
+  <!-- use cases column -->
+  <g font-family="Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a1410">
+    <ellipse cx="530" cy="195" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="200">UC01  Cadastrar / autenticar</text>
+    <ellipse cx="530" cy="255" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="260">UC02  Cardápio por unidade</text>
+    <ellipse cx="530" cy="315" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="320">UC03  Montar pedido</text>
+    <ellipse cx="530" cy="375" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="380">UC04  Consentimento LGPD</text>
+    <ellipse cx="530" cy="435" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="440">UC05  Pagamento externo</text>
+    <ellipse cx="530" cy="495" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="500">UC06  Status do pedido</text>
+    <ellipse cx="530" cy="555" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="560">UC07  Fidelidade</text>
+    <ellipse cx="530" cy="615" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="620">UC08  Promoções</text>
+    <ellipse cx="530" cy="735" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="740">UC09  Gerenciar cardápio</text>
+    <ellipse cx="530" cy="795" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="800">UC10  Preparar pedido</text>
+    <ellipse cx="530" cy="855" rx="130" ry="26" fill="#fff" stroke="#1a1410" stroke-width="1.5"/><text x="530" y="860">UC11  Atender / entregar</text>
+  </g>
+
+  <!-- stick actors left -->
+  <g fill="#d9a03a" stroke="#1a1410" stroke-width="1.5">
+    <circle cx="80" cy="310" r="14"/>
+    <circle cx="80" cy="530" r="14"/>
+    <circle cx="80" cy="690" r="14"/>
+  </g>
+  <g stroke="#1a1410" stroke-width="2.5" fill="none">
+    <line x1="80" y1="324" x2="80" y2="360"/><line x1="64" y1="340" x2="96" y2="340"/><line x1="80" y1="360" x2="66" y2="385"/><line x1="80" y1="360" x2="94" y2="385"/>
+    <line x1="80" y1="544" x2="80" y2="580"/><line x1="64" y1="560" x2="96" y2="560"/><line x1="80" y1="580" x2="66" y2="605"/><line x1="80" y1="580" x2="94" y2="605"/>
+    <line x1="80" y1="704" x2="80" y2="740"/><line x1="64" y1="720" x2="96" y2="720"/><line x1="80" y1="740" x2="66" y2="765"/><line x1="80" y1="740" x2="94" y2="765"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1a1410">
+    <text x="80" y="405">Cliente</text>
+    <text x="80" y="625">Atendente</text>
+    <text x="80" y="785">Gerente</text>
+  </g>
+
+  <!-- stick actors right -->
+  <g fill="#d9a03a" stroke="#1a1410" stroke-width="1.5">
+    <circle cx="1020" cy="300" r="14"/>
+    <circle cx="1020" cy="540" r="14"/>
+  </g>
+  <g stroke="#1a1410" stroke-width="2.5" fill="none">
+    <line x1="1020" y1="314" x2="1020" y2="350"/><line x1="1004" y1="330" x2="1036" y2="330"/><line x1="1020" y1="350" x2="1006" y2="375"/><line x1="1020" y1="350" x2="1034" y2="375"/>
+    <line x1="1020" y1="554" x2="1020" y2="590"/><line x1="1004" y1="570" x2="1036" y2="570"/><line x1="1020" y1="590" x2="1006" y2="615"/><line x1="1020" y1="590" x2="1034" y2="615"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1a1410">
+    <text x="1020" y="400">Pagamento</text>
+    <text x="1020" y="415" font-size="10" font-weight="normal">externo</text>
+    <text x="1020" y="635">Cozinha</text>
+  </g>
+
+  <text x="40" y="940" font-family="Arial,sans-serif" font-size="11" fill="#6b5e52">Convenção UML: boneco = ator · elipse = caso de uso · linha = associação (participa)</text>
+  <text x="40" y="960" font-family="Arial,sans-serif" font-size="11" fill="#999">Projeto acadêmico · UNINTER 2026</text>
 </svg>
