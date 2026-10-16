@@ -3,24 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Raízes do Nordeste — sabor que tem história.">
-  <title>Raízes do Nordeste | Sabor que tem história</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Raízes do Nordeste — protótipo de pedidos.">
+  <title>Raízes do Nordeste</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="smoke smoke-a" aria-hidden="true"></div>
-  <div class="smoke smoke-b" aria-hidden="true"></div>
 
-  <!-- Banner LGPD — Lei 13.709/2018 -->
   <div class="lgpd-banner" id="lgpdBanner" role="dialog" aria-label="Aviso de privacidade LGPD">
     <div class="lgpd-inner">
       <p>
         <strong>Privacidade (LGPD — Lei nº 13.709/2018):</strong>
-        tratamos dados pessoais somente com a sua autorização, para pedido e fidelidade.
-        Base legal: consentimento (art. 7º, I). Saiba mais na
+        usamos dados só com a sua autorização, para pedido e fidelidade.
+        Base legal: consentimento (art. 7º, I).
         <a href="#" id="openPrivacy">Política de Privacidade</a>.
       </p>
       <div class="lgpd-actions">
@@ -31,33 +25,33 @@
   </div>
 
   <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="Raízes do Nordeste - início">
+    <a class="brand" href="#inicio">
       <span class="brand-mark">RN</span>
       <span><strong>Raízes</strong><small>do Nordeste</small></span>
     </a>
-    <nav aria-label="Navegação principal">
+    <nav aria-label="Navegação">
       <a href="#inicio">Início</a>
       <a href="#cardapio">Cardápio</a>
       <a href="#fidelidade">Fidelidade</a>
       <a href="#promocoes">Promoções</a>
       <a href="#pedido">Meu pedido</a>
     </nav>
-    <button class="icon-btn" id="cartButton" aria-label="Abrir sacola">🛍 <span id="cartCount">0</span></button>
+    <button class="icon-btn" id="cartButton" type="button" aria-label="Sacola">Sacola <span id="cartCount">0</span></button>
   </header>
 
   <main>
     <section id="inicio" class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Cozinha nordestina • feita com memória</p>
-        <h1>Sabor que<br><em>tem história.</em></h1>
-        <p>Receitas que atravessam gerações, ingredientes da nossa terra e aquele tempero que lembra casa.</p>
+        <p class="eyebrow">Comida nordestina</p>
+        <h1>Sabor que<br><em>tem história</em></h1>
+        <p>Cardápio por unidade, pedido, fidelidade e status — protótipo do trabalho de Front-End.</p>
         <div class="hero-actions">
           <a class="btn primary" href="#cardapio">Ver cardápio</a>
-          <button class="btn ghost" id="loginButton" type="button">Entrar na minha conta</button>
+          <button class="btn ghost" id="loginButton" type="button">Entrar</button>
         </div>
         <div class="unit-line">
           <span class="dot"></span>
-          <label for="unitSelect">Você está em</label>
+          <label for="unitSelect">Unidade</label>
           <select id="unitSelect">
             <option>Recife</option>
             <option>Fortaleza</option>
@@ -66,19 +60,19 @@
         </div>
       </div>
       <div class="hero-photo">
-        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1100&q=85" alt="Prato de comida servido à mesa">
+        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80" alt="Prato de comida">
       </div>
     </section>
 
     <section id="cardapio" class="section">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Nosso cardápio</p>
-          <h2>Comida que conta história</h2>
+          <p class="eyebrow">Cardápio</p>
+          <h2>Escolha o que vai pedir</h2>
         </div>
-        <p>Escolha a unidade para ver a disponibilidade.</p>
+        <p>Muda conforme a unidade selecionada.</p>
       </div>
-      <div class="filters" role="group" aria-label="Categorias do cardápio">
+      <div class="filters" role="group" aria-label="Categorias">
         <button class="filter active" data-category="Todos" type="button">Todos</button>
         <button class="filter" data-category="Pratos" type="button">Pratos</button>
         <button class="filter" data-category="Lanches" type="button">Lanches</button>
@@ -89,9 +83,9 @@
 
     <section id="promocoes" class="promo section">
       <div>
-        <p class="eyebrow">Só hoje</p>
+        <p class="eyebrow">Promoção</p>
         <h2>Terça de raiz</h2>
-        <p>Na compra de dois pratos principais, ganhe um suco de cajá.</p>
+        <p>Na compra de dois pratos, ganhe um suco de cajá.</p>
         <button class="btn primary" id="promoButton" type="button">Quero aproveitar</button>
       </div>
       <div class="promo-badge">
@@ -103,41 +97,41 @@
 
     <section id="fidelidade" class="loyalty section">
       <div>
-        <p class="eyebrow">Programa de fidelidade</p>
-        <h2>Quanto mais você volta,<br>mais a gente retribui.</h2>
-        <p>A cada R$ 1 em pedidos, você acumula 1 ponto. Troque seus pontos por experiências da casa.</p>
+        <p class="eyebrow">Fidelidade</p>
+        <h2>Pontos a cada pedido</h2>
+        <p>A cada R$ 1 você ganha 1 ponto. Troque por benefícios da casa.</p>
         <div class="progress"><div id="progressBar" style="width:62%"></div></div>
         <div class="progress-label">
           <span id="pointsLabel">620 pontos</span>
           <span>1.000 pontos</span>
         </div>
-        <button class="btn ghost" id="loginLoyalty" type="button">Ver meus benefícios</button>
+        <button class="btn ghost" id="loginLoyalty" type="button">Ver benefícios</button>
       </div>
       <div class="loyalty-card">
         <span>Seu saldo</span>
         <strong id="pointsValue">620</strong>
         <small>pontos</small>
-        <div>Próximo benefício: <b>sobremesa da casa</b></div>
+        <div>Próximo: <b>sobremesa da casa</b></div>
       </div>
     </section>
 
     <section id="pedido" class="section order-section">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Acompanhamento</p>
-          <h2>Seu pedido, sem mistério.</h2>
+          <p class="eyebrow">Pedido</p>
+          <h2>Acompanhar status</h2>
         </div>
       </div>
       <div class="tracker" id="orderTracker">
-        <div class="step" data-step="0"><span>1</span><b>Recebido</b><small>Pedido confirmado</small></div>
+        <div class="step" data-step="0"><span>1</span><b>Recebido</b><small>Confirmado</small></div>
         <div class="track-line"></div>
-        <div class="step" data-step="1"><span>2</span><b>Em preparo</b><small>Na cozinha</small></div>
+        <div class="step" data-step="1"><span>2</span><b>Em preparo</b><small>Cozinha</small></div>
         <div class="track-line"></div>
-        <div class="step" data-step="2"><span>3</span><b>Pronto</b><small>Esperando você</small></div>
+        <div class="step" data-step="2"><span>3</span><b>Pronto</b><small>Esperando</small></div>
         <div class="track-line"></div>
-        <div class="step" data-step="3"><span>4</span><b>Retirada</b><small>Bom apetite!</small></div>
+        <div class="step" data-step="3"><span>4</span><b>Retirada</b><small>Final</small></div>
       </div>
-      <div class="order-empty" id="orderStatus">Você ainda não possui um pedido ativo. Adicione itens à sacola para começar.</div>
+      <div class="order-empty" id="orderStatus">Nenhum pedido ativo. Monte a sacola e finalize o pagamento.</div>
     </section>
   </main>
 
@@ -146,9 +140,9 @@
       <span class="brand-mark">RN</span>
       <span><strong>Raízes</strong><small>do Nordeste</small></span>
     </div>
-    <p>Projeto acadêmico • Rafael Ferreira Verissimo • RU 5000980</p>
+    <p>Projeto acadêmico — Rafael Ferreira Verissimo — RU 5000980</p>
     <p>
-      © 2026 Raízes do Nordeste ·
+      © 2026 ·
       <a href="#" id="footerPrivacy">Política de Privacidade (LGPD — Lei 13.709/2018)</a>
     </p>
   </footer>
