@@ -1,21 +1,15 @@
 # Diagramas e wireframes
 
-## FigJam — fluxo do sistema
-
-https://www.figma.com/board/cQKDdLkd85EnK6XarmNyr4
-
-- atores e funções (casos de uso)
-- jornada do pedido (com LGPD e pagamento)
-
-## Figma Design — wireframes UX/UI
+## Figma Design (principal)
 
 https://www.figma.com/design/OdPdpm2AkfFHB5OkO3lmmA
 
-Página **2. Wireframes**:
+- **Página 1** — Casos de uso (atores + UC01–UC10) e jornada resumida
+- **Página 2** — Wireframes baixa fidelidade (mobile e desktop)
 
-- Mobile: Home, Sacola/Checkout (+ LGPD), Login/Cadastro, Acompanhamento
-- Desktop: Home/Cardápio, Acompanhamento
-- Baixa fidelidade (arquitetura de informação)
+## FigJam (fluxo detalhado)
+
+https://www.figma.com/board/cQKDdLkd85EnK6XarmNyr4
 
 ## Arquivos em `docs/img/`
 
