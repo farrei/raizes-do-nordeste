@@ -179,7 +179,7 @@ function showPrivacy() {
       Tratamos nome, e-mail e dados do pedido só para mostrar o fluxo acadêmico
       (login, pedido e fidelidade). Base legal: consentimento (art. 7º, I).
       <br><br>
-      Não pedimos dado de cartão. O pagamento é simulado.
+      Não pedimos dados de cartão. O pagamento é simulado.
       Você pode pedir exclusão dos dados a qualquer momento (art. 18).
     </p>
     <button class="btn primary full" id="closePrivacyBtn" type="button">Entendi</button>
@@ -307,7 +307,7 @@ $("#checkoutButton").onclick = () => {
 
   showModal(`
     <h2>Pagamento externo</h2>
-    <p>Aqui é só simulação — <strong>não coletamos dado bancário</strong>.</p>
+    <p>Aqui é só simulação — <strong>não coletamos dados bancários</strong>.</p>
     <label class="check-label">
       <input type="checkbox" id="consent">
       Autorizo o tratamento dos dados do pedido (LGPD — Lei 13.709/2018, art. 7º, I).
