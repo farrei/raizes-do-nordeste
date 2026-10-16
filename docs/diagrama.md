@@ -1,16 +1,24 @@
 # Diagramas
 
-Arquivos na pasta `docs/img/`:
+## FigJam (principal)
 
-- [casos-de-uso.svg](img/casos-de-uso.svg) — casos de uso (atores e UC01–UC11)
-- [jornada.svg](img/jornada.svg) — jornada do cliente
-- [wireframes.svg](img/wireframes.svg) — wireframes mobile e desktop
+**Raízes do Nordeste — Fluxo do Sistema**
 
-## Figma
+https://www.figma.com/board/cQKDdLkd85EnK6XarmNyr4
 
-Versão editável:
+Conteúdo do quadro:
 
-- https://www.figma.com/design/OdPdpm2AkfFHB5OkO3lmmA
-- https://www.figma.com/board/cQKDdLkd85EnK6XarmNyr4
+- atores: Cliente, Atendente, Cozinha, Gerente/Administrador, pagamento externo
+- funções: cadastro, cardápio por unidade, pedido, status, fidelidade, promoções, pagamento, LGPD
+- fluxo do pedido (jornada) com decisões de confirmação e pagamento
+- ramos de gerente e atendente
 
-No PDF da entrega as figuras foram exportadas a partir desses artefatos.
+## Arquivos em `docs/img/`
+
+- [casos-de-uso.svg](img/casos-de-uso.svg)
+- [jornada.svg](img/jornada.svg)
+- [wireframes.svg](img/wireframes.svg)
+
+## Design (wireframes / layout)
+
+https://www.figma.com/design/OdPdpm2AkfFHB5OkO3lmmA
