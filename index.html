@@ -85,13 +85,13 @@
       <div>
         <p class="eyebrow">Promoção</p>
         <h2>Terça de raiz</h2>
-        <p>Na compra de dois pratos, ganhe um suco de cajá.</p>
+        <p>Na compra de <strong>dois pratos</strong>, o <strong>suco de cajá</strong> sai grátis.</p>
         <button class="btn primary" id="promoButton" type="button">Quero aproveitar</button>
       </div>
       <div class="promo-badge">
-        <strong>10%</strong>
-        <span>OFF</span>
-        <small>no 2º prato</small>
+        <strong>2</strong>
+        <span>pratos</span>
+        <small>= suco grátis</small>
       </div>
     </section>
 
@@ -99,19 +99,19 @@
       <div>
         <p class="eyebrow">Fidelidade</p>
         <h2>Pontos a cada pedido</h2>
-        <p>A cada R$ 1 você ganha 1 ponto. Troque por benefícios da casa.</p>
-        <div class="progress"><div id="progressBar" style="width:62%"></div></div>
+        <p>A cada R$ 1 no total do pedido você ganha 1 ponto. Com 1.000 pontos, sobremesa da casa.</p>
+        <div class="progress"><div id="progressBar" style="width:0%"></div></div>
         <div class="progress-label">
-          <span id="pointsLabel">620 pontos</span>
+          <span id="pointsLabel">0 pontos</span>
           <span>1.000 pontos</span>
         </div>
-        <button class="btn ghost" id="loginLoyalty" type="button">Ver benefícios</button>
+        <button class="btn ghost" id="loginLoyalty" type="button">Ver conta</button>
       </div>
       <div class="loyalty-card">
         <span>Seu saldo</span>
-        <strong id="pointsValue">620</strong>
+        <strong id="pointsValue">0</strong>
         <small>pontos</small>
-        <div>Próximo: <b>sobremesa da casa</b></div>
+        <div id="nextBenefit">Faltam <b>1000</b> pontos para a sobremesa da casa</div>
       </div>
     </section>
 
