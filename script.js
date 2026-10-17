@@ -8,30 +8,79 @@ const menu = [
   { id: 6, name: "Suco de Cajá", category: "Bebidas", price: 9.90, desc: "Polpa de cajá, água e um toque de açúcar.", img: "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=80", units: ["Recife", "Fortaleza", "Salvador"] }
 ];
 
-// conta de teste pra quem for avaliar o trabalho
 const DEMO = {
   email: "teste@teste.com",
   senha: "123456",
   nome: "Teste"
 };
 
+const META_PONTOS = 1000;
+const JUICE_ID = 6;
+
 let cart = [];
 let currentCategory = "Todos";
 let currentUnit = "Recife";
 let orderStep = -1;
-let points = 620;
+let promoAtiva = false;
+let points = 0;
 let user = null;
 
 try {
+  const savedPts = localStorage.getItem("rn_points");
+  if (savedPts !== null) points = Math.max(0, parseInt(savedPts, 10) || 0);
   const saved = sessionStorage.getItem("rn_user");
   if (saved) user = JSON.parse(saved);
+  if (localStorage.getItem("rn_promo") === "1") promoAtiva = true;
 } catch (e) {}
 
 const $ = (s) => document.querySelector(s);
 const money = (n) => n.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
+function savePoints() {
+  try { localStorage.setItem("rn_points", String(points)); } catch (e) {}
+}
+
+function updatePointsUI() {
+  if ($("#pointsValue")) $("#pointsValue").textContent = points;
+  if ($("#pointsLabel")) $("#pointsLabel").textContent = points + " pontos";
+  if ($("#progressBar")) {
+    $("#progressBar").style.width = Math.min(100, (points / META_PONTOS) * 100) + "%";
+  }
+  const next = $("#nextBenefit");
+  if (next) {
+    if (points >= META_PONTOS) next.innerHTML = "Você já pode resgatar a <b>sobremesa da casa</b>";
+    else next.innerHTML = "Faltam <b>" + (META_PONTOS - points) + "</b> pontos para a sobremesa da casa";
+  }
+}
+
 function menuDaUnidade() {
   return menu.filter((x) => x.units.includes(currentUnit));
+}
+
+function qtdPratos() {
+  return cart
+    .filter((x) => x.category === "Pratos")
+    .reduce((s, x) => s + x.qty, 0);
+}
+
+function temSucoGratis() {
+  return promoAtiva && qtdPratos() >= 2;
+}
+
+function subtotalCart() {
+  return cart.reduce((s, x) => s + x.price * x.qty, 0);
+}
+
+function descontoPromo() {
+  // 2 pratos ou mais → suco de cajá sai grátis (se estiver na sacola)
+  if (!temSucoGratis()) return 0;
+  const suco = cart.find((x) => x.id === JUICE_ID);
+  if (!suco) return 0;
+  return Math.min(suco.price, suco.price * suco.qty); // 1 suco grátis
+}
+
+function totalCart() {
+  return Math.max(0, subtotalCart() - descontoPromo());
 }
 
 function updateLoginButton() {
@@ -99,7 +148,10 @@ function remove(id) {
 }
 
 function renderCart() {
-  const total = cart.reduce((s, x) => s + x.price * x.qty, 0);
+  const sub = subtotalCart();
+  const desc = descontoPromo();
+  const total = totalCart();
+
   $("#cartCount").textContent = cart.reduce((s, x) => s + x.qty, 0);
   $("#cartTotal").textContent = money(total);
 
@@ -108,15 +160,27 @@ function renderCart() {
     return;
   }
 
-  $("#cartItems").innerHTML = cart.map((x) => `
+  let html = cart.map((x) => {
+    const gratis = temSucoGratis() && x.id === JUICE_ID;
+    return `
     <div class="cart-row">
       <div>
         <strong>${x.name}</strong>
-        <small>${x.qty} × ${money(x.price)}</small>
+        <small>${x.qty} × ${money(x.price)}${gratis ? " · 1 grátis (promo)" : ""}</small>
       </div>
       <button data-remove="${x.id}" type="button">Remover</button>
-    </div>
-  `).join("");
+    </div>`;
+  }).join("");
+
+  if (desc > 0) {
+    html += `<p style="font-size:13px;color:var(--ok);margin:8px 0 0">Promo: −${money(desc)} (suco de cajá grátis)</p>`;
+  } else if (promoAtiva && qtdPratos() < 2) {
+    html += `<p style="font-size:12px;color:var(--muted);margin:8px 0 0">Promo ativa: adicione 2 pratos e um suco de cajá para ganhar o suco grátis.</p>`;
+  }
+
+  html += `<p style="font-size:12px;color:var(--muted);margin:6px 0 0">Pontos deste pedido: +${Math.floor(total)}</p>`;
+
+  $("#cartItems").innerHTML = html;
 
   document.querySelectorAll("[data-remove]").forEach((b) => {
     b.onclick = () => remove(Number(b.dataset.remove));
@@ -191,6 +255,7 @@ function openAuth(mode) {
     showModal(`
       <h2>Minha conta</h2>
       <p>Logado como <strong>${user.nome}</strong> (${user.email}).</p>
+      <p style="font-size:13px">Saldo: <strong>${points}</strong> pontos</p>
       <button class="btn primary full" id="doLogout" type="button" style="margin-top:14px">Sair</button>
     `);
     return;
@@ -291,12 +356,25 @@ $("#unitSelect").onchange = (e) => {
 $("#loginButton").onclick = () => openAuth("login");
 $("#loginLoyalty").onclick = () => openAuth("login");
 
+// Promo: 2 pratos + suco de cajá → 1 suco grátis
 $("#promoButton").onclick = () => {
-  if (!cart.length) {
-    const disponivel = menuDaUnidade()[0];
-    if (disponivel) add(disponivel.id);
+  promoAtiva = true;
+  try { localStorage.setItem("rn_promo", "1"); } catch (e) {}
+
+  // garante 2 pratos da unidade + suco, se ainda não tiver
+  const pratos = menuDaUnidade().filter((x) => x.category === "Pratos");
+  while (qtdPratos() < 2 && pratos.length) {
+    add(pratos[Math.min(qtdPratos(), pratos.length - 1)].id);
   }
-  toast("Promoção aplicada.");
+  if (!cart.find((x) => x.id === JUICE_ID)) {
+    const suco = menu.find((x) => x.id === JUICE_ID && x.units.includes(currentUnit));
+    if (suco) add(suco.id);
+    else toast("Suco de cajá não disponível nesta unidade.");
+  }
+
+  renderCart();
+  openCart();
+  toast("Promo ativa: 2 pratos → 1 suco de cajá grátis.");
 };
 
 $("#checkoutButton").onclick = () => {
@@ -305,9 +383,14 @@ $("#checkoutButton").onclick = () => {
     return;
   }
 
+  const total = totalCart();
+  const desc = descontoPromo();
+
   showModal(`
     <h2>Pagamento externo</h2>
     <p>Aqui é só simulação — <strong>não coletamos dados bancários</strong>.</p>
+    <p style="font-size:14px">Total: <strong>${money(total)}</strong>${desc > 0 ? " (com promo)" : ""}</p>
+    <p style="font-size:13px;color:var(--muted)">Você ganha <strong>+${Math.floor(total)}</strong> pontos neste pedido.</p>
     <label class="check-label">
       <input type="checkbox" id="consent">
       Autorizo o tratamento dos dados do pedido (LGPD — Lei 13.709/2018, art. 7º, I).
@@ -411,22 +494,25 @@ document.addEventListener("click", (e) => {
       return;
     }
 
+    const total = totalCart();
+    const ganhos = Math.floor(total);
+
     closeModal();
     closeCart();
 
     const orderId = "RN-" + Math.floor(1000 + Math.random() * 9000);
-    const total = cart.reduce((s, x) => s + x.price * x.qty, 0);
 
     cart = [];
+    promoAtiva = false;
+    try { localStorage.removeItem("rn_promo"); } catch (e) {}
     renderCart();
 
-    points += Math.floor(total);
-    $("#pointsValue").textContent = points;
-    $("#pointsLabel").textContent = points + " pontos";
-    $("#progressBar").style.width = Math.min(100, (points / 1000) * 100) + "%";
+    points += ganhos;
+    savePoints();
+    updatePointsUI();
 
     startOrderTracking(orderId);
-    toast("Pagamento simulado. Pedido criado.");
+    toast("Pedido ok. +" + ganhos + " pontos (saldo: " + points + ").");
   }
 });
 
@@ -440,3 +526,4 @@ renderMenu();
 renderCart();
 updateTracker();
 updateLoginButton();
+updatePointsUI();
