@@ -123,10 +123,10 @@ function aceitarLgpd() {
 }
 
 function recusarLgpd() {
-  alert("Sem aceitar a LGPD não dá pra usar o site direito");
+  alert("Sem aceitar a LGPD não dá pra usar o site direito. A Lei nº 13.709/2018 exige o consentimento.");
 }
 
-// login simples
+// login
 function abrirLogin() {
   document.getElementById("modal-login").style.display = "block";
 }
@@ -138,6 +138,13 @@ function fecharLogin() {
 function fazerLogin() {
   const email = document.getElementById("email").value;
   const senha = document.getElementById("senha").value;
+  const lgpdCheck = document.getElementById("lgpd-login").checked;
+
+  if (!lgpdCheck) {
+    alert("Você precisa aceitar a Lei nº 13.709/2018 (LGPD) para entrar.");
+    return;
+  }
+
   if (email === "teste@teste.com" && senha === "123456") {
     alert("Login feito com sucesso");
     fecharLogin();
