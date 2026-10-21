@@ -11,7 +11,7 @@ const cardapio = {
     { nome: "Suco de acerola", preco: 7.50, tipo: "suco", img: "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=400&q=80" }
   ],
   salvador: [
-    { nome: "Moqueca", preco: 40.00, tipo: "prato", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/MOQUECAB.jpg/640px-MOQUECAB.jpg" },
+    { nome: "Moqueca", preco: 40.00, tipo: "prato", img: "https://cdn.pixabay.com/photo/2016/10/21/23/33/stew-1759394_640.jpg" },
     { nome: "Vatapá", preco: 22.00, tipo: "prato", img: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=400&q=80" },
     { nome: "Suco de graviola", preco: 9.00, tipo: "suco", img: "https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=400&q=80" }
   ]
