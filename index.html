@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raizes do Nordeste</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- banner da lgpd -->
+  <div class="lgpd-banner" id="lgpdBanner">
+    <div class="lgpd-inner">
+      <p>
+        <strong>Privacidade (LGPD - Lei 13.709/2018):</strong>
+        a gente so usa seus dados com autorizacao, pra pedido e fidelidade.
+        Base legal: consentimento (art. 7, I).
+        <a href="#" id="openPrivacy">Politica de Privacidade</a>
+      </p>
+      <div class="lgpd-actions">
+        <button class="btn ghost" id="lgpdRefuse" type="button">Recusar</button>
+        <button class="btn primary" id="lgpdAccept" type="button">Aceitar</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio">
+      <span class="brand-mark">RN</span>
+      <span><strong>Raizes</strong><small>do Nordeste</small></span>
+    </a>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#cardapio">Cardapio</a>
+      <a href="#fidelidade">Fidelidade</a>
+      <a href="#promocoes">Promocoes</a>
+      <a href="#pedido">Meu pedido</a>
+    </nav>
+    <button class="icon-btn" id="cartButton" type="button">Sacola <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Comida nordestina</p>
+        <h1>Sabor que<br><em>tem historia</em></h1>
+        <p>Cardapio por unidade, pedido, fidelidade e status. Prototipo do trabalho de Front-End.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#cardapio">Ver cardapio</a>
+          <button class="btn ghost" id="loginButton" type="button">Entrar</button>
+        </div>
+        <div class="unit-line">
+          <span class="dot"></span>
+          <label for="unitSelect">Unidade</label>
+          <select id="unitSelect">
+            <option>Recife</option>
+            <option>Fortaleza</option>
+            <option>Salvador</option>
+          </select>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80" alt="Prato de comida">
+      </div>
+    </section>
+
+    <section id="cardapio" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Cardapio</p>
+          <h2>Escolha o que vai pedir</h2>
+        </div>
+        <p>Muda conforme a unidade.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" data-category="Todos" type="button">Todos</button>
+        <button class="filter" data-category="Pratos" type="button">Pratos</button>
+        <button class="filter" data-category="Lanches" type="button">Lanches</button>
+        <button class="filter" data-category="Bebidas" type="button">Bebidas</button>
+      </div>
+      <div id="menuGrid" class="menu-grid"></div>
+    </section>
+
+    <section id="promocoes" class="promo section">
+      <div>
+        <p class="eyebrow">Promocao</p>
+        <h2>Terca de raiz</h2>
+        <p>Na compra de <strong>dois pratos</strong>, o <strong>suco de caja</strong> sai gratis.</p>
+        <button class="btn primary" id="promoButton" type="button">Quero aproveitar</button>
+      </div>
+      <div class="promo-badge">
+        <strong>2</strong>
+        <span>pratos</span>
+        <small>= suco gratis</small>
+      </div>
+    </section>
+
+    <section id="fidelidade" class="loyalty section">
+      <div>
+        <p class="eyebrow">Fidelidade</p>
+        <h2>Pontos a cada pedido</h2>
+        <p>A cada R$ 1 no total do pedido voce ganha 1 ponto. Com 1000 pontos, sobremesa da casa.</p>
+        <div class="progress"><div id="progressBar" style="width:0%"></div></div>
+        <div class="progress-label">
+          <span id="pointsLabel">0 pontos</span>
+          <span>1000 pontos</span>
+        </div>
+        <button class="btn ghost" id="loginLoyalty" type="button">Ver conta</button>
+      </div>
+      <div class="loyalty-card">
+        <span>Seu saldo</span>
+        <strong id="pointsValue">0</strong>
+        <small>pontos</small>
+        <div id="nextBenefit">Faltam <b>1000</b> pontos para a sobremesa da casa</div>
+      </div>
+    </section>
+
+    <section id="pedido" class="section order-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Pedido</p>
+          <h2>Acompanhar status</h2>
+        </div>
+      </div>
+      <div class="tracker" id="orderTracker">
+        <div class="step" data-step="0"><span>1</span><b>Recebido</b><small>Confirmado</small></div>
+        <div class="track-line"></div>
+        <div class="step" data-step="1"><span>2</span><b>Em preparo</b><small>Cozinha</small></div>
+        <div class="track-line"></div>
+        <div class="step" data-step="2"><span>3</span><b>Pronto</b><small>Esperando</small></div>
+        <div class="track-line"></div>
+        <div class="step" data-step="3"><span>4</span><b>Retirada</b><small>Final</small></div>
+      </div>
+      <div class="order-empty" id="orderStatus">Nenhum pedido ativo. Monte a sacola e finalize o pagamento.</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand">
+      <span class="brand-mark">RN</span>
+      <span><strong>Raizes</strong><small>do Nordeste</small></span>
+    </div>
+    <p>Projeto academico - Rafael Ferreira Verissimo - RU 5000980</p>
+    <p>
+      2026 -
+      <a href="#" id="footerPrivacy">Politica de Privacidade (LGPD - Lei 13.709/2018)</a>
+    </p>
+  </footer>
+
+  <aside class="drawer" id="cartDrawer">
+    <div class="drawer-head">
+      <h2>Sua sacola</h2>
+      <button class="close" id="closeCart" type="button">x</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+      <button class="btn primary full" id="checkoutButton" type="button">Continuar para pagamento</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="close" id="closeModal" type="button">x</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
