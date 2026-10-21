@@ -8,11 +8,16 @@
 </head>
 <body>
 
-  <!-- banner da LGPD -->
-  <div id="lgpd-banner" class="banner">
-    <p>Este site usa dados pessoais conforme a Lei 13.709/2018 (LGPD). Você aceita?</p>
-    <button onclick="aceitarLgpd()">Aceitar</button>
-    <button onclick="recusarLgpd()">Recusar</button>
+  <!-- Banner LGPD sempre visivel ate aceitar -->
+  <div id="lgpd-banner" class="banner-lgpd">
+    <div class="banner-conteudo">
+      <p><strong>Aviso de Privacidade - Lei nº 13.709/2018 (LGPD)</strong></p>
+      <p>Este site coleta e trata dados pessoais (nome, e-mail e dados de pedido) de acordo com a Lei Geral de Proteção de Dados Pessoais. Ao continuar, você consente com o tratamento dos seus dados para a realização do pedido.</p>
+      <div class="banner-botoes">
+        <button onclick="aceitarLgpd()" class="btn-aceitar">Aceitar e continuar</button>
+        <button onclick="recusarLgpd()" class="btn-recusar">Recusar</button>
+      </div>
+    </div>
   </div>
 
   <header>
@@ -58,15 +63,25 @@
     </div>
   </section>
 
-  <!-- modal de login -->
+  <!-- modal de login mais profissional -->
   <div id="modal-login" class="modal">
-    <div class="modal-conteudo">
-      <h3>Login</h3>
-      <input type="email" id="email" placeholder="E-mail" value="teste@teste.com">
-      <input type="password" id="senha" placeholder="Senha" value="123456">
-      <label><input type="checkbox" id="lgpd-login"> Aceito a LGPD</label>
-      <button onclick="fazerLogin()">Entrar</button>
-      <button onclick="fecharLogin()">Fechar</button>
+    <div class="modal-conteudo login-box">
+      <h3>Entrar na sua conta</h3>
+      <p class="login-subtitulo">Use a conta de teste ou entre com seus dados</p>
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="seu@email.com" value="teste@teste.com">
+      </div>
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Sua senha" value="123456">
+      </div>
+      <label class="checkbox-lgpd">
+        <input type="checkbox" id="lgpd-login">
+        Li e aceito o tratamento dos meus dados pessoais conforme a Lei nº 13.709/2018 (LGPD).
+      </label>
+      <button onclick="fazerLogin()" class="btn-principal">Entrar</button>
+      <button onclick="fecharLogin()" class="btn-secundario">Fechar</button>
     </div>
   </div>
 
@@ -74,17 +89,20 @@
   <div id="modal-pagamento" class="modal">
     <div class="modal-conteudo">
       <h3>Pagamento simulado</h3>
-      <p>Dados bancários (simulado, nada é real):</p>
+      <p>Dados bancários (simulado, nenhuma informação real é armazenada):</p>
       <input type="text" placeholder="Nome no cartão">
       <input type="text" placeholder="Número do cartão">
-      <label><input type="checkbox" id="lgpd-pagamento"> Aceito o uso dos dados conforme LGPD</label>
-      <button onclick="confirmarPagamento()">Pagar</button>
-      <button onclick="fecharPagamento()">Cancelar</button>
+      <label class="checkbox-lgpd">
+        <input type="checkbox" id="lgpd-pagamento">
+        Aceito o uso dos dados para este pedido conforme a Lei nº 13.709/2018 (LGPD).
+      </label>
+      <button onclick="confirmarPagamento()" class="btn-principal">Pagar</button>
+      <button onclick="fecharPagamento()" class="btn-secundario">Cancelar</button>
     </div>
   </div>
 
   <footer>
-    <p>Raízes do Nordeste - 2026</p>
+    <p>Raízes do Nordeste - 2026 | Tratamento de dados conforme Lei nº 13.709/2018 (LGPD)</p>
   </footer>
 
   <script src="script.js"></script>
