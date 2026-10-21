@@ -1,19 +1,19 @@
-// dados do cardapio por unidade
+// dados do cardapio por unidade com imagens
 const cardapio = {
   recife: [
-    { nome: "Baião de dois", preco: 28.90, tipo: "prato" },
-    { nome: "Carne de sol", preco: 35.00, tipo: "prato" },
-    { nome: "Suco de caju", preco: 8.00, tipo: "suco" }
+    { nome: "Baião de dois", preco: 28.90, tipo: "prato", img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=400&q=80" },
+    { nome: "Carne de sol", preco: 35.00, tipo: "prato", img: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=400&q=80" },
+    { nome: "Suco de caju", preco: 8.00, tipo: "suco", img: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=400&q=80" }
   ],
   fortaleza: [
-    { nome: "Peixe frito", preco: 32.00, tipo: "prato" },
-    { nome: "Acarajé", preco: 15.00, tipo: "prato" },
-    { nome: "Suco de acerola", preco: 7.50, tipo: "suco" }
+    { nome: "Peixe frito", preco: 32.00, tipo: "prato", img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=400&q=80" },
+    { nome: "Acarajé", preco: 15.00, tipo: "prato", img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80" },
+    { nome: "Suco de acerola", preco: 7.50, tipo: "suco", img: "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=400&q=80" }
   ],
   salvador: [
-    { nome: "Moqueca", preco: 40.00, tipo: "prato" },
-    { nome: "Vatapá", preco: 22.00, tipo: "prato" },
-    { nome: "Suco de graviola", preco: 9.00, tipo: "suco" }
+    { nome: "Moqueca", preco: 40.00, tipo: "prato", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/MOQUECAB.jpg/640px-MOQUECAB.jpg" },
+    { nome: "Vatapá", preco: 22.00, tipo: "prato", img: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=400&q=80" },
+    { nome: "Suco de graviola", preco: 9.00, tipo: "suco", img: "https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=400&q=80" }
   ]
 };
 
@@ -38,7 +38,12 @@ function filtrarCardapio() {
   cardapio[unidade].forEach(item => {
     const div = document.createElement("div");
     div.className = "item-cardapio";
-    div.innerHTML = `<h3>${item.nome}</h3><p>R$ ${item.preco.toFixed(2)}</p><button onclick="adicionarSacola('${item.nome}', ${item.preco}, '${item.tipo}')">Adicionar</button>`;
+    div.innerHTML = `
+      <img src="${item.img}" alt="${item.nome}" class="img-prato">
+      <h3>${item.nome}</h3>
+      <p>R$ ${item.preco.toFixed(2)}</p>
+      <button onclick="adicionarSacola('${item.nome}', ${item.preco}, '${item.tipo}')">Adicionar</button>
+    `;
     lista.appendChild(div);
   });
 }
