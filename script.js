@@ -224,7 +224,7 @@ function acceptLgpd() {
 }
 
 function refuseLgpd() {
-  $("#lgpdBanner").style.display = "none");
+  $("#lgpdBanner").style.display = "none";
   toast("Ok. Algumas funcoes ficam limitadas.");
 }
 
