@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raízes do Nordeste</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raízes do Nordeste</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- banner LGPD -->
-    <div id="lgpd-banner" class="lgpd">
-        <p>Usamos cookies e dados pessoais conforme a Lei 13.709/2018 (LGPD). Aceita?</p>
-        <label><input type="checkbox" id="lgpd-ok"> Li e aceito o tratamento dos meus dados</label>
-        <button onclick="aceitarLgpd()">Aceitar</button>
-        <button onclick="recusarLgpd()">Recusar</button>
+
+  <!-- banner da LGPD -->
+  <div id="lgpd-banner" class="banner">
+    <p>Este site usa dados pessoais conforme a Lei 13.709/2018 (LGPD). Você aceita?</p>
+    <button onclick="aceitarLgpd()">Aceitar</button>
+    <button onclick="recusarLgpd()">Recusar</button>
+  </div>
+
+  <header>
+    <h1>Raízes do Nordeste</h1>
+    <nav>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#sacola">Sacola</a>
+      <a href="#status">Status</a>
+      <button onclick="abrirLogin()">Login</button>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2>Comida nordestina de verdade</h2>
+    <p>Escolha a unidade e faça seu pedido.</p>
+  </section>
+
+  <section id="cardapio">
+    <h2>Cardápio</h2>
+    <label>Unidade:</label>
+    <select id="unidade" onchange="filtrarCardapio()">
+      <option value="recife">Recife</option>
+      <option value="fortaleza">Fortaleza</option>
+      <option value="salvador">Salvador</option>
+    </select>
+    <div id="lista-cardapio"></div>
+  </section>
+
+  <section id="sacola">
+    <h2>Sacola</h2>
+    <div id="itens-sacola"></div>
+    <p>Total: R$ <span id="total">0,00</span></p>
+    <button onclick="finalizarPedido()">Finalizar pedido</button>
+  </section>
+
+  <section id="status">
+    <h2>Status do pedido</h2>
+    <div id="etapas">
+      <div>Recebido</div>
+      <div>Preparando</div>
+      <div>Pronto</div>
+      <div>Entregue</div>
     </div>
+  </section>
 
-    <header>
-        <h1>Raízes do Nordeste</h1>
-        <p>Comida boa do Nordeste</p>
-        <div>
-            <button onclick="mostrarLogin()">Entrar</button>
-            <span id="pontos">Pontos: 0</span>
-            <button onclick="mostrarCarrinho()">Sacola (<span id="qtd-carrinho">0</span>)</button>
-        </div>
-    </header>
-
-    <section class="hero">
-        <h2>Escolha sua unidade</h2>
-        <select id="filtro-unidade" onchange="filtrarCardapio()">
-            <option value="todas">Todas</option>
-            <option value="Recife">Recife</option>
-            <option value="Fortaleza">Fortaleza</option>
-            <option value="Salvador">Salvador</option>
-        </select>
-    </section>
-
-    <section id="promo">
-        <h3>Promoção: 2 pratos = 1 suco grátis!</h3>
-    </section>
-
-    <section id="cardapio"></section>
-
-    <!-- modal login -->
-    <div id="modal-login" class="modal">
-        <div class="modal-content">
-            <h2>Login</h2>
-            <input type="email" id="email" placeholder="Email">
-            <input type="password" id="senha" placeholder="Senha">
-            <button onclick="fazerLogin()">Entrar</button>
-            <button onclick="fecharModal('modal-login')">Fechar</button>
-            <p>Teste: teste@teste.com / 123456</p>
-        </div>
+  <!-- modal de login -->
+  <div id="modal-login" class="modal">
+    <div class="modal-conteudo">
+      <h3>Login</h3>
+      <input type="email" id="email" placeholder="E-mail" value="teste@teste.com">
+      <input type="password" id="senha" placeholder="Senha" value="123456">
+      <label><input type="checkbox" id="lgpd-login"> Aceito a LGPD</label>
+      <button onclick="fazerLogin()">Entrar</button>
+      <button onclick="fecharLogin()">Fechar</button>
     </div>
+  </div>
 
-    <!-- modal carrinho -->
-    <div id="modal-carrinho" class="modal">
-        <div class="modal-content">
-            <h2>Sacola</h2>
-            <div id="itens-carrinho"></div>
-            <p>Total: R$ <span id="total">0</span></p>
-            <button onclick="finalizarPedido()">Finalizar Pedido</button>
-            <button onclick="fecharModal('modal-carrinho')">Fechar</button>
-        </div>
+  <!-- modal de pagamento -->
+  <div id="modal-pagamento" class="modal">
+    <div class="modal-conteudo">
+      <h3>Pagamento simulado</h3>
+      <p>Dados bancários (simulado, nada é real):</p>
+      <input type="text" placeholder="Nome no cartão">
+      <input type="text" placeholder="Número do cartão">
+      <label><input type="checkbox" id="lgpd-pagamento"> Aceito o uso dos dados conforme LGPD</label>
+      <button onclick="confirmarPagamento()">Pagar</button>
+      <button onclick="fecharPagamento()">Cancelar</button>
     </div>
+  </div>
 
-    <!-- modal pagamento -->
-    <div id="modal-pagamento" class="modal">
-        <div class="modal-content">
-            <h2>Pagamento (simulado)</h2>
-            <p>Informe os dados bancários:</p>
-            <input type="text" placeholder="Nome no cartão">
-            <input type="text" placeholder="Número do cartão">
-            <button onclick="confirmarPagamento()">Pagar</button>
-            <button onclick="fecharModal('modal-pagamento')">Cancelar</button>
-        </div>
-    </div>
+  <footer>
+    <p>Raízes do Nordeste - 2026</p>
+  </footer>
 
-    <!-- status pedido -->
-    <section id="status-pedido" style="display:none;">
-        <h2>Status do Pedido</h2>
-        <div class="steps">
-            <div class="step">1. Recebido</div>
-            <div class="step">2. Preparando</div>
-            <div class="step">3. Saiu para entrega</div>
-            <div class="step">4. Entregue</div>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,13 +1,17 @@
 # Raízes do Nordeste
 
-Site simples de cardápio e pedidos de comida nordestina.
+Projeto de front-end para a disciplina de Projeto Multidisciplinar da UNINTER.
 
-Feito para o trabalho da faculdade UNINTER.
+Site simples de pedidos com cardápio por unidade (Recife, Fortaleza e Salvador), sacola, status do pedido, pontos de fidelidade e promoção.
 
-Para testar o login use:
-email: teste@teste.com
-senha: 123456
+## Como testar
 
-Tem banner da LGPD (Lei 13.709/2018), cardápio por unidade (Recife, Fortaleza e Salvador), carrinho, promoção de 2 pratos = suco grátis, pontos de fidelidade e status do pedido.
+- Conta de teste: teste@teste.com / 123456
+- Aceite o banner da LGPD para usar
+- 2 pratos no pedido ganham 1 suco grátis
+- 1 ponto por cada real pago
 
-Diagrama e wireframes no Figma: https://www.figma.com/design/RVPFZtnUJdtTAXPn8jzary
+## Links
+
+- Site: https://farrei.github.io/raizes-do-nordeste/
+- Figma: https://www.figma.com/design/RVPFZtnUJdtTAXPn8jzary
